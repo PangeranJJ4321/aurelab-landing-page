@@ -78,9 +78,9 @@ export const mockData = {
   },
   
   contact: {
-    email: "hello@aurelab.co.id",
-    phone: "+62 21 1234 5678",
-    address: "Jakarta, Indonesia",
+    email: "aurelabcare@gmail.com",
+    phone: "+62 878-2167-9787",
+    address: "Remote, Indonesia",
     
     socialMedia: [
       { platform: "LinkedIn", url: "https://linkedin.com/company/aurelab" },

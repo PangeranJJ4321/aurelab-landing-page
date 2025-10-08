@@ -1,0 +1,1 @@
+export { default as LogoAureLab } from "./Logo_AureLab.png";
