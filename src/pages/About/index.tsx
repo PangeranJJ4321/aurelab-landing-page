@@ -29,26 +29,6 @@ export const AboutSection = () => {
     }
   ];
 
-  const coreValues = [
-    {
-      icon: "🔍",
-      title: "Refleksi",
-      description: "Continuous learning dan improvement melalui evaluasi mendalam terhadap setiap project dan feedback.",
-      glowColor: "shadow-blue-500/20"
-    },
-    {
-      icon: "🤝", 
-      title: "Relasi",
-      description: "Membangun partnership jangka panjang berbasis trust dan mutual growth dengan setiap stakeholder.",
-      glowColor: "shadow-[#dfaa1a]/20"
-    },
-    {
-      icon: "🚀",
-      title: "Aspirasi", 
-      description: "Mendorong boundaries inovasi untuk menciptakan breakthrough solutions yang meaningful.",
-      glowColor: "shadow-purple-500/20"
-    }
-  ];
 
   return (
     <section id="about" className="py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
@@ -171,41 +151,6 @@ export const AboutSection = () => {
                 </Card>
               );
             })}
-          </div>
-        </div>
-
-        {/* Core Values */}
-        <div className="bg-gradient-to-r from-gray-900/80 to-black/80 backdrop-blur-lg border border-[#dfaa1a]/20 rounded-3xl p-8 lg:p-12 relative overflow-hidden">
-          {/* Background Glow */}
-          <div className="absolute inset-0 bg-gradient-to-br from-[#dfaa1a]/5 via-transparent to-purple-500/5"></div>
-          
-          <div className="relative z-10">
-            <div className="text-center mb-12">
-              <h3 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                Core Values
-              </h3>
-              <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-                Nilai-nilai fundamental yang menjadi DNA perusahaan dalam setiap interaksi dan pengambilan keputusan
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {coreValues.map((value, index) => (
-                <div key={index} className={`group text-center p-6 rounded-2xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-[#dfaa1a]/30 transition-all duration-300 hover:scale-105 shadow-xl ${value.glowColor} hover:shadow-2xl`}>
-                  <div className="mb-6">
-                    <div className="w-20 h-20 mx-auto bg-gradient-to-r from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center text-4xl group-hover:scale-110 transition-all duration-300 border border-gray-600 group-hover:border-[#dfaa1a]/30">
-                      {value.icon}
-                    </div>
-                  </div>
-                  <h4 className="text-xl font-bold text-white mb-3 group-hover:text-[#dfaa1a] transition-colors duration-300">
-                    {value.title}
-                  </h4>
-                  <p className="text-gray-300 leading-relaxed">
-                    {value.description}
-                  </p>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
 

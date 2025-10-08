@@ -148,66 +148,7 @@ export const TeamSection = () => {
           })}
         </div>
 
-        {/* Team Stats */}
-        <div className="bg-gradient-to-r from-gray-900/90 to-black/90 backdrop-blur-lg border border-[#dfaa1a]/30 rounded-3xl p-8 lg:p-12 mb-16 relative overflow-hidden">
-          {/* Background Glow Effects */}
-          <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#dfaa1a]/5 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-1/4 w-48 h-48 bg-purple-500/5 rounded-full blur-3xl"></div>
-          
-          <div className="relative z-10">
-            <div className="text-center mb-12">
-              <h3 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                Achievement Statistics
-              </h3>
-              <p className="text-gray-300 text-lg">
-                Track record keunggulan dan komitmen terhadap excellence dalam setiap project
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center group">
-                <div className="mb-4">
-                  <div className="text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#dfaa1a] to-yellow-400 group-hover:scale-110 transition-transform duration-300">
-                    {mockData.stats.projectsCompleted}
-                  </div>
-                  <div className="w-16 h-1 bg-gradient-to-r from-[#dfaa1a] to-yellow-400 mx-auto rounded-full group-hover:w-20 transition-all duration-300"></div>
-                </div>
-                <div className="text-gray-300 font-medium">Projects Delivered</div>
-              </div>
-              
-              <div className="text-center group">
-                <div className="mb-4">
-                  <div className="text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 group-hover:scale-110 transition-transform duration-300">
-                    {mockData.stats.happyClients}
-                  </div>
-                  <div className="w-16 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto rounded-full group-hover:w-20 transition-all duration-300"></div>
-                </div>
-                <div className="text-gray-300 font-medium">Happy Clients</div>
-              </div>
-              
-              <div className="text-center group">
-                <div className="mb-4">
-                  <div className="text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-violet-400 group-hover:scale-110 transition-transform duration-300">
-                    {mockData.stats.yearsExperience}
-                  </div>
-                  <div className="w-16 h-1 bg-gradient-to-r from-purple-400 to-violet-400 mx-auto rounded-full group-hover:w-20 transition-all duration-300"></div>
-                </div>
-                <div className="text-gray-300 font-medium">Years Excellence</div>
-              </div>
-              
-              <div className="text-center group">
-                <div className="mb-4">
-                  <div className="text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400 group-hover:scale-110 transition-transform duration-300">
-                    {mockData.stats.teamMembers}
-                  </div>
-                  <div className="w-16 h-1 bg-gradient-to-r from-green-400 to-emerald-400 mx-auto rounded-full group-hover:w-20 transition-all duration-300"></div>
-                </div>
-                <div className="text-gray-300 font-medium">Expert Members</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
+       
         {/* Join Team CTA */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-gray-900/80 to-black/80 backdrop-blur-lg border border-[#dfaa1a]/20 rounded-2xl p-8 lg:p-12 relative overflow-hidden">

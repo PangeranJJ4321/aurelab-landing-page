@@ -27,8 +27,8 @@ export const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            <a href="#home" className="text-gray-300 hover:text-[#dfaa1a] transition-all duration-300 relative group">
+          <nav className="hidden md:flex space-x-8 text-white">
+            <a href="#home" className="text-white hover:text-[#dfaa1a] transition-all duration-300 relative group">
               Home
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#dfaa1a] transition-all duration-300 group-hover:w-full"></div>
             </a>
