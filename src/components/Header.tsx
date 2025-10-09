@@ -10,6 +10,18 @@ export const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleNavClick = (elementId: string) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      const elementPosition = element.offsetTop - 80; // 80px offset untuk header
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
+    }
+    setIsMenuOpen(false); // Close mobile menu after click
+  };
+
   return (
     <header className="bg-black/95 backdrop-blur-lg border-b border-[#dfaa1a]/20 sticky top-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -30,41 +42,41 @@ export const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8 text-white">
-            <a
-              href="#home"
+            <button
+              onClick={() => handleNavClick('home')}
               className="text-white hover:text-[#dfaa1a] transition-all duration-300 relative group"
             >
               Home
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#dfaa1a] transition-all duration-300 group-hover:w-full"></div>
-            </a>
-            <a
-              href="#product-development"
+            </button>
+            <button
+              onClick={() => handleNavClick('product-development')}
               className="text-gray-300 hover:text-[#dfaa1a] transition-all duration-300 relative group"
             >
               Products
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#dfaa1a] transition-all duration-300 group-hover:w-full"></div>
-            </a>
-            <a
-              href="#about"
+            </button>
+            <button
+              onClick={() => handleNavClick('about')}
               className="text-gray-300 hover:text-[#dfaa1a] transition-all duration-300 relative group"
             >
               About
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#dfaa1a] transition-all duration-300 group-hover:w-full"></div>
-            </a>
-            <a
-              href="#team"
+            </button>
+            <button
+              onClick={() => handleNavClick('team')}
               className="text-gray-300 hover:text-[#dfaa1a] transition-all duration-300 relative group"
             >
               Team
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#dfaa1a] transition-all duration-300 group-hover:w-full"></div>
-            </a>
-            <a
-              href="#contact"
+            </button>
+            <button
+              onClick={() => handleNavClick('contact')}
               className="text-gray-300 hover:text-[#dfaa1a] transition-all duration-300 relative group"
             >
               Contact
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#dfaa1a] transition-all duration-300 group-hover:w-full"></div>
-            </a>
+            </button>
           </nav>
 
           {/* CTA Button */}
@@ -90,41 +102,36 @@ export const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-[#dfaa1a]/20 bg-black/90 backdrop-blur-lg">
             <nav className="flex flex-col space-y-4">
-              <a
-                href="#home"
-                className="text-gray-300 hover:text-[#dfaa1a] transition-colors duration-300 py-2"
-                onClick={() => setIsMenuOpen(false)}
+              <button
+                onClick={() => handleNavClick('home')}
+                className="text-gray-300 hover:text-[#dfaa1a] transition-colors duration-300 py-2 text-left"
               >
                 Home
-              </a>
-              <a
-                href="#product-development"
-                className="text-gray-300 hover:text-[#dfaa1a] transition-colors duration-300 py-2"
-                onClick={() => setIsMenuOpen(false)}
+              </button>
+              <button
+                onClick={() => handleNavClick('product-development')}
+                className="text-gray-300 hover:text-[#dfaa1a] transition-colors duration-300 py-2 text-left"
               >
                 Products
-              </a>
-              <a
-                href="#about"
-                className="text-gray-300 hover:text-[#dfaa1a] transition-colors duration-300 py-2"
-                onClick={() => setIsMenuOpen(false)}
+              </button>
+              <button
+                onClick={() => handleNavClick('about')}
+                className="text-gray-300 hover:text-[#dfaa1a] transition-colors duration-300 py-2 text-left"
               >
                 About
-              </a>
-              <a
-                href="#team"
-                className="text-gray-300 hover:text-[#dfaa1a] transition-colors duration-300 py-2"
-                onClick={() => setIsMenuOpen(false)}
+              </button>
+              <button
+                onClick={() => handleNavClick('team')}
+                className="text-gray-300 hover:text-[#dfaa1a] transition-colors duration-300 py-2 text-left"
               >
                 Team
-              </a>
-              <a
-                href="#contact"
-                className="text-gray-300 hover:text-[#dfaa1a] transition-colors duration-300 py-2"
-                onClick={() => setIsMenuOpen(false)}
+              </button>
+              <button
+                onClick={() => handleNavClick('contact')}
+                className="text-gray-300 hover:text-[#dfaa1a] transition-colors duration-300 py-2 text-left"
               >
                 Contact
-              </a>
+              </button>
               <Button className="relative bg-gradient-to-r from-[#dfaa1a] to-yellow-500 text-black font-bold w-full mt-4 transition-all duration-300">
                 Get Started
               </Button>
