@@ -84,7 +84,7 @@ export const mockData = {
     
     socialMedia: [
       { platform: "LinkedIn", url: "https://linkedin.com/company/aurelab" },
-      { platform: "Instagram", url: "https://instagram.com/aurelab.official" },
+      { platform: "Instagram", url: "https://www.instagram.com/journey.aurelab" },
       { platform: "Twitter", url: "https://twitter.com/aurelab_id" }
     ],
     
