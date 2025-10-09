@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '../../components/ui/card';
-import { Mail, Phone, MapPin, Clock, Linkedin, Instagram, Twitter, Send, CheckCircle, Zap } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Linkedin, Instagram, Twitter, Send, CheckCircle, Zap, Loader2, AlertCircle } from 'lucide-react';
 import { mockData } from '../../constants/mock';
+import { initializeEmailJS, sendEmail, validateFormData } from '../../lib/emailjs';
 
 export const ContactSection = () => {
   const { contact } = mockData;
@@ -11,6 +12,17 @@ export const ContactSection = () => {
     company: '',
     message: ''
   });
+  const [isLoading, setIsLoading] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: 'success' | 'error' | null;
+    message: string;
+  }>({ type: null, message: '' });
+  const [errors, setErrors] = useState<string[]>([]);
+
+  // Initialize EmailJS on component mount
+  useEffect(() => {
+    initializeEmailJS();
+  }, []);
 
   const socialIcons = {
     LinkedIn: Linkedin,
@@ -25,12 +37,53 @@ export const ContactSection = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Mock form submission
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We will get back to you soon.');
-    setFormData({ name: '', email: '', company: '', message: '' });
+    setIsLoading(true);
+    setSubmitStatus({ type: null, message: '' });
+    setErrors([]);
+
+    // Validate form data
+    const validation = validateFormData(formData);
+    if (!validation.isValid) {
+      setErrors(validation.errors);
+      setIsLoading(false);
+      return;
+    }
+
+    try {
+      // Prepare template parameters for EmailJS
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        company: formData.company || 'Not specified',
+        message: formData.message,
+      };
+
+      // Send email using EmailJS
+      const result = await sendEmail(templateParams);
+
+      if (result.success) {
+        setSubmitStatus({
+          type: 'success',
+          message: 'Thank you for your message! We will get back to you soon.'
+        });
+        setFormData({ name: '', email: '', company: '', message: '' });
+      } else {
+        setSubmitStatus({
+          type: 'error',
+          message: result.message
+        });
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitStatus({
+        type: 'error',
+        message: 'An unexpected error occurred. Please try again.'
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -100,6 +153,37 @@ export const ContactSection = () => {
                 <p className="text-gray-400">Tell us about your vision and we'll make it reality</p>
               </CardHeader>
               <CardContent className="p-8">
+                {/* Status Messages */}
+                {submitStatus.type && (
+                  <div className={`mb-6 p-4 rounded-lg flex items-center gap-3 ${
+                    submitStatus.type === 'success' 
+                      ? 'bg-green-500/10 border border-green-500/30 text-green-400' 
+                      : 'bg-red-500/10 border border-red-500/30 text-red-400'
+                  }`}>
+                    {submitStatus.type === 'success' ? (
+                      <CheckCircle className="h-5 w-5" />
+                    ) : (
+                      <AlertCircle className="h-5 w-5" />
+                    )}
+                    <span>{submitStatus.message}</span>
+                  </div>
+                )}
+
+                {/* Error Messages */}
+                {errors.length > 0 && (
+                  <div className="mb-6 p-4 bg-red-500/10 border border-red-500/30 rounded-lg">
+                    <div className="flex items-center gap-3 mb-2">
+                      <AlertCircle className="h-5 w-5 text-red-400" />
+                      <span className="text-red-400 font-medium">Please fix the following errors:</span>
+                    </div>
+                    <ul className="list-disc list-inside space-y-1">
+                      {errors.map((error, index) => (
+                        <li key={index} className="text-red-400 text-sm">{error}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
@@ -155,10 +239,22 @@ export const ContactSection = () => {
                   
                   <button
                     type="submit"
-                    className="relative group w-full bg-gradient-to-r from-[#dfaa1a] to-yellow-500 hover:from-yellow-500 hover:to-[#dfaa1a] text-black font-bold py-4 rounded-lg text-lg transition-all duration-300 transform hover:scale-105"
+                    disabled={isLoading}
+                    className={`relative group w-full bg-gradient-to-r from-[#dfaa1a] to-yellow-500 hover:from-yellow-500 hover:to-[#dfaa1a] text-black font-bold py-4 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none ${
+                      isLoading ? 'cursor-not-allowed' : ''
+                    }`}
                   >
-                    Send Message
-                    <Send className="inline-block ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                    {isLoading ? (
+                      <>
+                        <Loader2 className="inline-block mr-2 h-5 w-5 animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        Send Message
+                        <Send className="inline-block ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                      </>
+                    )}
                     <div className="absolute inset-0 bg-gradient-to-r from-[#dfaa1a] to-yellow-500 rounded-lg blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
                   </button>
                 </form>
