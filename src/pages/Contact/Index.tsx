@@ -323,14 +323,10 @@ export const ContactSection = () => {
               <CardContent className="space-y-2">
                 <div className="flex justify-between text-sm">
                   <span className="text-gray-400">Monday - Friday</span>
-                  <span className="text-white">09:00 - 18:00</span>
+                  <span className="text-white">09:00 - 17:00</span>
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span className="text-gray-400">Saturday</span>
-                  <span className="text-white">09:00 - 15:00</span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-gray-400">Sunday</span>
+                  <span className="text-gray-400">Saturday - Sunday</span>
                   <span className="text-gray-500">Closed</span>
                 </div>
               </CardContent>

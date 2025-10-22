@@ -166,9 +166,8 @@ export const Footer = () => {
             <div className="mt-6 p-4 bg-gradient-to-r from-gray-900/50 to-gray-800/50 rounded-xl border border-gray-800">
               <h5 className="text-sm font-semibold text-[#dfaa1a] mb-2">Operating Hours</h5>
               <div className="text-xs text-gray-400 space-y-1">
-                <p>Mon-Fri: {contact.operatingHours.weekdays.split(': ')[1]}</p>
-                <p>Sat: {contact.operatingHours.weekend.split(': ')[1]}</p>
-                <p>Sun: Closed</p>
+                <p>Mon-Fri: 09:00 - 17:00 WIB</p>
+                <p>Sat-Sun: Closed</p>
               </div>
             </div>
           </div>

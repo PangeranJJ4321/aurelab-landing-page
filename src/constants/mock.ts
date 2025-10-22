@@ -88,8 +88,8 @@ export const mockData = {
     ],
     
     operatingHours: {
-      weekdays: "Senin - Jumat: 09:00 - 18:00 WIB",
-      weekend: "Sabtu: 09:00 - 15:00 WIB", 
+      weekdays: "Senin - Jumat: 09:00 - 17:00 WIB",
+      weekend: "Sabtu - Minggu: Tutup", 
       holiday: "Minggu: Tutup"
     },
     
