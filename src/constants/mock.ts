@@ -78,7 +78,7 @@ export const mockData = {
   },
   
   contact: {
-    email: "aurelabcare@gmail.com",
+    email: "marketingaurelab@gmail.com",
     phone: "+62 878-2167-9787",
     address: "Remote, Indonesia",
     
