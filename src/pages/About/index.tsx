@@ -157,7 +157,18 @@ export const AboutSection = () => {
         {/* CTA Section */}
         <div className="text-center mt-16">
           <div className="inline-flex items-center gap-4">
-            <button className="relative group bg-gradient-to-r from-[#dfaa1a] to-yellow-500 hover:from-yellow-500 hover:to-[#dfaa1a] text-black font-bold px-8 py-4 rounded-xl text-lg transition-all duration-300 transform hover:scale-105">
+            <button 
+              onClick={() => {
+                const element = document.getElementById('about');
+                if (element) {
+                  element.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                  });
+                }
+              }}
+              className="relative group bg-gradient-to-r from-[#dfaa1a] to-yellow-500 hover:from-yellow-500 hover:to-[#dfaa1a] text-black font-bold px-8 py-4 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 cursor-pointer"
+            >
               Learn More About Us
               <ArrowRight className="inline-block ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
               <div className="absolute inset-0 bg-gradient-to-r from-[#dfaa1a] to-yellow-500 rounded-xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
