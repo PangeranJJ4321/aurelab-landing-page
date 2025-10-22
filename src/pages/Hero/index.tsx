@@ -82,7 +82,16 @@ export const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 size="lg"
-                className="relative group bg-gradient-to-r from-[#dfaa1a] to-yellow-500 hover:from-yellow-500 hover:to-[#dfaa1a] text-black font-bold px-8 py-4 text-lg rounded-lg transition-all duration-300 transform hover:scale-105"
+                className="relative group bg-gradient-to-r from-[#dfaa1a] to-yellow-500 hover:from-yellow-500 hover:to-[#dfaa1a] text-black font-bold px-8 py-4 text-lg rounded-lg transition-all duration-300 transform hover:scale-105 cursor-pointer"
+                onClick={() => {
+                  const element = document.getElementById('product-development');
+                  if (element) {
+                    element.scrollIntoView({ 
+                      behavior: 'smooth',
+                      block: 'start'
+                    });
+                  }
+                }}
               >
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
@@ -91,7 +100,7 @@ export const HeroSection = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-[#dfaa1a] text-[#dfaa1a] hover:bg-[#dfaa1a] hover:text-black px-8 py-4 text-lg rounded-lg transition-all duration-300 backdrop-blur-sm"
+                className="border-[#dfaa1a] cursor-pointer text-[#dfaa1a] hover:bg-[#dfaa1a] hover:text-black px-8 py-4 text-lg rounded-lg transition-all duration-300 backdrop-blur-sm bg-transparent"
               >
                 Explore Products
               </Button>
@@ -99,7 +108,7 @@ export const HeroSection = () => {
 
             {/* Tech Stack Icons */}
             <div className="flex flex-wrap gap-6 pt-8">
-              <div className="flex items-center gap-3 text-gray-400 group">
+              <div className="flex items-center gap-3 text-gray-400 group cursor-pointer">
                 <div className="p-2 bg-[#dfaa1a]/10 rounded-lg group-hover:bg-[#dfaa1a]/20 transition-colors duration-300">
                   <Smartphone className="h-6 w-6 text-[#dfaa1a]" />
                 </div>
@@ -107,7 +116,7 @@ export const HeroSection = () => {
                   Mobile Development
                 </span>
               </div>
-              <div className="flex items-center gap-3 text-gray-400 group">
+              <div className="flex items-center gap-3 text-gray-400 group cursor-pointer">
                 <div className="p-2 bg-[#dfaa1a]/10 rounded-lg group-hover:bg-[#dfaa1a]/20 transition-colors duration-300">
                   <Globe className="h-6 w-6 text-[#dfaa1a]" />
                 </div>
@@ -115,7 +124,7 @@ export const HeroSection = () => {
                   Web Solutions
                 </span>
               </div>
-              <div className="flex items-center gap-3 text-gray-400 group">
+              <div className="flex items-center gap-3 text-gray-400 group cursor-pointer">
                 <div className="p-2 bg-[#dfaa1a]/10 rounded-lg group-hover:bg-[#dfaa1a]/20 transition-colors duration-300">
                   <Cpu className="h-6 w-6 text-[#dfaa1a]" />
                 </div>

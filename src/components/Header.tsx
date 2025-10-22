@@ -44,35 +44,35 @@ export const Header = () => {
           <nav className="hidden md:flex space-x-8 text-white">
             <button
               onClick={() => handleNavClick('home')}
-              className="text-white hover:text-[#dfaa1a] transition-all duration-300 relative group"
+              className="text-white hover:text-[#dfaa1a] transition-all duration-300 relative group cursor-pointer"
             >
               Home
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#dfaa1a] transition-all duration-300 group-hover:w-full"></div>
             </button>
             <button
               onClick={() => handleNavClick('product-development')}
-              className="text-gray-300 hover:text-[#dfaa1a] transition-all duration-300 relative group"
+              className="text-gray-300 hover:text-[#dfaa1a] transition-all duration-300 relative group cursor-pointer"
             >
               Products
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#dfaa1a] transition-all duration-300 group-hover:w-full"></div>
             </button>
             <button
               onClick={() => handleNavClick('about')}
-              className="text-gray-300 hover:text-[#dfaa1a] transition-all duration-300 relative group"
+              className="text-gray-300 hover:text-[#dfaa1a] transition-all duration-300 relative group cursor-pointer"
             >
               About
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#dfaa1a] transition-all duration-300 group-hover:w-full"></div>
             </button>
             <button
               onClick={() => handleNavClick('team')}
-              className="text-gray-300 hover:text-[#dfaa1a] transition-all duration-300 relative group"
+              className="text-gray-300 hover:text-[#dfaa1a] transition-all duration-300 relative group cursor-pointer"
             >
               Team
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#dfaa1a] transition-all duration-300 group-hover:w-full"></div>
             </button>
             <button
               onClick={() => handleNavClick('contact')}
-              className="text-gray-300 hover:text-[#dfaa1a] transition-all duration-300 relative group"
+              className="text-gray-300 hover:text-[#dfaa1a] transition-all duration-300 relative group cursor-pointer"
             >
               Contact
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#dfaa1a] transition-all duration-300 group-hover:w-full"></div>
@@ -81,7 +81,10 @@ export const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button className="relative bg-gradient-to-r from-[#dfaa1a] to-yellow-500 hover:from-yellow-500 hover:to-[#dfaa1a] text-black font-bold px-6 py-2 rounded-lg transition-all duration-300 transform hover:scale-105">
+            <Button 
+              onClick={() => handleNavClick('product-development')}
+              className="relative bg-gradient-to-r from-[#dfaa1a] to-yellow-500 hover:from-yellow-500 hover:to-[#dfaa1a] text-black font-bold px-6 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 cursor-pointer"
+            >
               Get Started
               <div className="absolute inset-0 bg-gradient-to-r from-[#dfaa1a] to-yellow-500 rounded-lg blur-sm opacity-30 animate-pulse"></div>
             </Button>
@@ -91,7 +94,7 @@ export const Header = () => {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-gray-300 hover:text-[#dfaa1a] transition-colors duration-300"
+              className="text-gray-300 hover:text-[#dfaa1a] transition-colors duration-300 cursor-pointer"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -104,35 +107,38 @@ export const Header = () => {
             <nav className="flex flex-col space-y-4">
               <button
                 onClick={() => handleNavClick('home')}
-                className="text-gray-300 hover:text-[#dfaa1a] transition-colors duration-300 py-2 text-left"
+                className="text-gray-300 hover:text-[#dfaa1a] transition-colors duration-300 py-2 text-left cursor-pointer"
               >
                 Home
               </button>
               <button
                 onClick={() => handleNavClick('product-development')}
-                className="text-gray-300 hover:text-[#dfaa1a] transition-colors duration-300 py-2 text-left"
+                className="text-gray-300 hover:text-[#dfaa1a] transition-colors duration-300 py-2 text-left cursor-pointer"
               >
                 Products
               </button>
               <button
                 onClick={() => handleNavClick('about')}
-                className="text-gray-300 hover:text-[#dfaa1a] transition-colors duration-300 py-2 text-left"
+                className="text-gray-300 hover:text-[#dfaa1a] transition-colors duration-300 py-2 text-left cursor-pointer"
               >
                 About
               </button>
               <button
                 onClick={() => handleNavClick('team')}
-                className="text-gray-300 hover:text-[#dfaa1a] transition-colors duration-300 py-2 text-left"
+                className="text-gray-300 hover:text-[#dfaa1a] transition-colors duration-300 py-2 text-left cursor-pointer"
               >
                 Team
               </button>
               <button
                 onClick={() => handleNavClick('contact')}
-                className="text-gray-300 hover:text-[#dfaa1a] transition-colors duration-300 py-2 text-left"
+                className="text-gray-300 hover:text-[#dfaa1a] transition-colors duration-300 py-2 text-left cursor-pointer"
               >
                 Contact
               </button>
-              <Button className="relative bg-gradient-to-r from-[#dfaa1a] to-yellow-500 text-black font-bold w-full mt-4 transition-all duration-300">
+              <Button 
+                onClick={() => handleNavClick('product-development')}
+                className="relative bg-gradient-to-r from-[#dfaa1a] to-yellow-500 text-black font-bold w-full mt-4 transition-all duration-300 cursor-pointer"
+              >
                 Get Started
               </Button>
             </nav>
