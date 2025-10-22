@@ -207,6 +207,8 @@ export const Footer = () => {
               © {currentYear} AureLab. All rights reserved. 
               <span className="text-[#dfaa1a]"> Innovating the Future</span> of Digital Technology.
             </div>
+            {/* Comment out legal links temporarily */}
+            {/* 
             <div className="flex gap-6 text-sm">
               <a href="#" className="text-gray-400 hover:text-[#dfaa1a] transition-colors duration-300">
                 Privacy Policy
@@ -221,6 +223,7 @@ export const Footer = () => {
                 Careers
               </a>
             </div>
+            */}
           </div>
         </div>
       </div>
