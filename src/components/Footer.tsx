@@ -174,7 +174,8 @@ export const Footer = () => {
           </div>
         </div>
 
-        {/* Newsletter Section */}
+        {/* Comment out newsletter section temporarily */}
+        {/* 
         <div className="border-t border-gray-800 pt-8 mb-8">
           <div className="bg-gradient-to-r from-gray-900/80 to-black/80 backdrop-blur-lg border border-[#dfaa1a]/20 rounded-2xl p-6 lg:p-8">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
@@ -199,6 +200,7 @@ export const Footer = () => {
             </div>
           </div>
         </div>
+        */}
 
         {/* Bottom Section */}
         <div className="border-t border-gray-800 pt-8">
