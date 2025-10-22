@@ -83,9 +83,8 @@ export const mockData = {
     address: "Remote, Indonesia",
     
     socialMedia: [
-      { platform: "LinkedIn", url: "https://linkedin.com/company/aurelab" },
       { platform: "Instagram", url: "https://www.instagram.com/journey.aurelab" },
-      { platform: "Twitter", url: "https://twitter.com/aurelab_id" }
+      { platform: "Threads", url: "https://www.threads.net/@journey.aurelab" }
     ],
     
     operatingHours: {
