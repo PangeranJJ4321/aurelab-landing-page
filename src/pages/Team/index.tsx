@@ -168,7 +168,18 @@ export const TeamSection = () => {
                   <ArrowRight className="inline-block ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
                   <div className="absolute inset-0 bg-gradient-to-r from-[#dfaa1a] to-yellow-500 rounded-xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
                 </button>
-                <button className="border border-[#dfaa1a]/50 text-[#dfaa1a] hover:bg-[#dfaa1a] hover:text-black px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 backdrop-blur-sm">
+                <button 
+                  onClick={() => {
+                    const element = document.getElementById('about');
+                    if (element) {
+                      element.scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'start'
+                      });
+                    }
+                  }}
+                  className="border border-[#dfaa1a]/50 text-[#dfaa1a] hover:bg-[#dfaa1a] hover:text-black px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 backdrop-blur-sm cursor-pointer"
+                >
                   Learn About Culture
                 </button>
               </div>
