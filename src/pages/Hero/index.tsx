@@ -1,7 +1,10 @@
 import { Button } from "../../components/ui/button";
 import { ArrowRight, Code, Smartphone, Globe, Cpu, Zap } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export const HeroSection = () => {
+  const navigate = useNavigate();
+
   return (
     <section
       id="home"
@@ -101,6 +104,7 @@ export const HeroSection = () => {
                 variant="outline"
                 size="lg"
                 className="border-[#dfaa1a] cursor-pointer text-[#dfaa1a] hover:bg-[#dfaa1a] hover:text-black px-8 py-4 text-lg rounded-lg transition-all duration-300 backdrop-blur-sm bg-transparent"
+                onClick={() => navigate('/products')}
               >
                 Explore Products
               </Button>
