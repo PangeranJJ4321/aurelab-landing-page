@@ -253,7 +253,7 @@ const Positions: React.FC = () => {
       <Footer />
       
       {/* Floating Send CV Button */}
-      <div className="fixed bottom-6 right-6 z-50">
+      {/* <div className="fixed bottom-6 right-6 z-50">
         <Button 
           onClick={() => window.location.href = '/apply'}
           className="bg-[#dfaa1a] hover:bg-[#dfaa1a]/80 text-black font-semibold px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
@@ -261,7 +261,7 @@ const Positions: React.FC = () => {
           <Upload size={20} className="mr-2" />
           Kirim CV
         </Button>
-      </div>
+      </div> */}
     </div>
   );
 };
