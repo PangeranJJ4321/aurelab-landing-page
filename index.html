@@ -5,9 +5,37 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>aurelab-landing-page</title>
+    <style>
+      /* Prevent white flash on page load */
+      html, body {
+        background-color: #000000 !important;
+        margin: 0;
+        padding: 0;
+      }
+      
+      #root {
+        background-color: #000000;
+        min-height: 100vh;
+      }
+      
+      /* Loading state */
+      .loading {
+        background-color: #000000;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #dfaa1a;
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div class="loading">
+        <div>AureLab</div>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

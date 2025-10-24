@@ -15,8 +15,8 @@ export const Header = () => {
   };
 
   const handleNavClick = (elementId: string) => {
-    // Jika di halaman Products, navigasi ke home dulu
-    if (location.pathname === '/products') {
+    // Jika di halaman Products atau Positions, navigasi ke home dulu
+    if (location.pathname === '/products' || location.pathname.startsWith('/positions')) {
       setIsNavigating(true);
       navigate('/');
       // Delay untuk memastikan halaman home sudah load
@@ -52,9 +52,16 @@ export const Header = () => {
     setTimeout(() => setIsNavigating(false), 500);
   };
 
+  const handlePositionsClick = () => {
+    setIsNavigating(true);
+    navigate('/positions');
+    setIsMenuOpen(false);
+    setTimeout(() => setIsNavigating(false), 500);
+  };
+
   const handleGetStartedClick = () => {
-    if (location.pathname === '/products') {
-      // Jika di halaman Products, navigasi ke home dan scroll ke Technology Evolution Path
+    if (location.pathname === '/products' || location.pathname.startsWith('/positions')) {
+      // Jika di halaman Products atau Positions, navigasi ke home dan scroll ke Technology Evolution Path
       setIsNavigating(true);
       navigate('/');
       setTimeout(() => {
@@ -106,17 +113,36 @@ export const Header = () => {
           <nav className="hidden md:flex space-x-8 text-white">
             <button
               onClick={() => handleNavClick('home')}
-              className="text-white hover:text-[#dfaa1a] transition-all duration-300 relative group cursor-pointer"
+              className={`transition-all duration-300 relative group cursor-pointer ${
+                location.pathname === '/' ? 'text-[#dfaa1a]' : 'text-white hover:text-[#dfaa1a]'
+              }`}
             >
               Home
-              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#dfaa1a] transition-all duration-300 group-hover:w-full"></div>
+              <div className={`absolute bottom-0 left-0 h-0.5 bg-[#dfaa1a] transition-all duration-300 ${
+                location.pathname === '/' ? 'w-full' : 'w-0 group-hover:w-full'
+              }`}></div>
             </button>
             <button
               onClick={handleProductsClick}
-              className="text-gray-300 hover:text-[#dfaa1a] transition-all duration-300 relative group cursor-pointer"
+              className={`transition-all duration-300 relative group cursor-pointer ${
+                location.pathname === '/products' ? 'text-[#dfaa1a]' : 'text-gray-300 hover:text-[#dfaa1a]'
+              }`}
             >
               Products
-              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#dfaa1a] transition-all duration-300 group-hover:w-full"></div>
+              <div className={`absolute bottom-0 left-0 h-0.5 bg-[#dfaa1a] transition-all duration-300 ${
+                location.pathname === '/products' ? 'w-full' : 'w-0 group-hover:w-full'
+              }`}></div>
+            </button>
+            <button
+              onClick={handlePositionsClick}
+              className={`transition-all duration-300 relative group cursor-pointer ${
+                location.pathname.startsWith('/positions') ? 'text-[#dfaa1a]' : 'text-gray-300 hover:text-[#dfaa1a]'
+              }`}
+            >
+              Karir
+              <div className={`absolute bottom-0 left-0 h-0.5 bg-[#dfaa1a] transition-all duration-300 ${
+                location.pathname.startsWith('/positions') ? 'w-full' : 'w-0 group-hover:w-full'
+              }`}></div>
             </button>
             <button
               onClick={() => handleNavClick('about')}
@@ -169,15 +195,27 @@ export const Header = () => {
             <nav className="flex flex-col space-y-4">
               <button
                 onClick={() => handleNavClick('home')}
-                className="text-gray-300 hover:text-[#dfaa1a] transition-colors duration-300 py-2 text-left cursor-pointer"
+                className={`transition-colors duration-300 py-2 text-left cursor-pointer ${
+                  location.pathname === '/' ? 'text-[#dfaa1a]' : 'text-gray-300 hover:text-[#dfaa1a]'
+                }`}
               >
                 Home
               </button>
               <button
                 onClick={handleProductsClick}
-                className="text-gray-300 hover:text-[#dfaa1a] transition-colors duration-300 py-2 text-left cursor-pointer"
+                className={`transition-colors duration-300 py-2 text-left cursor-pointer ${
+                  location.pathname === '/products' ? 'text-[#dfaa1a]' : 'text-gray-300 hover:text-[#dfaa1a]'
+                }`}
               >
                 Products
+              </button>
+              <button
+                onClick={handlePositionsClick}
+                className={`transition-colors duration-300 py-2 text-left cursor-pointer ${
+                  location.pathname.startsWith('/positions') ? 'text-[#dfaa1a]' : 'text-gray-300 hover:text-[#dfaa1a]'
+                }`}
+              >
+                Karir
               </button>
               <button
                 onClick={() => handleNavClick('about')}

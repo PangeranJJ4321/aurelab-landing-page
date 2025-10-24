@@ -135,4 +135,21 @@ html {
   body {
     @apply bg-background text-foreground;
   }
+  
+  /* Prevent white flash during page transitions */
+  html, body {
+    background-color: #000000 !important;
+    transition: background-color 0.1s ease-in-out;
+  }
+  
+  /* Smooth page transitions */
+  .page-transition {
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  /* Ensure consistent black background */
+  #root {
+    background-color: #000000;
+    min-height: 100vh;
+  }
 }

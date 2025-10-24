@@ -220,7 +220,7 @@ export const Footer = () => {
               <a href="#" className="text-gray-400 hover:text-[#dfaa1a] transition-colors duration-300">
                 Security
               </a>
-              <a href="#" className="text-gray-400 hover:text-[#dfaa1a] transition-colors duration-300">
+              <a href="/positions" className="text-gray-400 hover:text-[#dfaa1a] transition-colors duration-300">
                 Careers
               </a>
             </div>
