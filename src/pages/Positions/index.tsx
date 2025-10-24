@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '../../components/ui/card';
 import { Button } from '../../components/ui/button';
-import { Heart, MapPin, Clock, DollarSign, Upload } from 'lucide-react';
+import { Heart, MapPin, Clock, DollarSign } from 'lucide-react';
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
 import { mockData } from '../../constants/mock';
