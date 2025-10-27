@@ -1,20 +1,23 @@
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import { useEffect, useState, createContext, useContext } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState, createContext, useContext } from "react";
 import { Header } from "./components/Header";
 import { HeroSection } from "./pages/Hero/index";
 import { ProductRoadmap } from "./pages/Roadmap/index";
 // import { AboutSection } from "./pages/About/index";
 import { TeamSection } from "./pages/Team/index";
 import { ContactSection } from "./pages/Contact/Index";
-import { ProductsPage } from "./pages/Products/index";
 import { Footer } from "./components/Footer";
 import { PositionsModal } from "./components/PositionsModal";
+import { ProductsModal } from "./components/ProductsModal";
 
 // Create context for modal state
 interface ModalContextType {
   isPositionsModalOpen: boolean;
   openPositionsModal: () => void;
   closePositionsModal: () => void;
+  isProductsModalOpen: boolean;
+  openProductsModal: () => void;
+  closeProductsModal: () => void;
 }
 
 const ModalContext = createContext<ModalContextType | undefined>(undefined);
@@ -41,43 +44,23 @@ const LandingPage = () => {
   );
 };
 
-// Smooth transition wrapper component
-const PageTransition = ({ children }: { children: React.ReactNode }) => {
-  const [isVisible, setIsVisible] = useState(true);
-  const location = useLocation();
-
-  useEffect(() => {
-    setIsVisible(false);
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 50);
-    return () => clearTimeout(timer);
-  }, [location.pathname]);
-
-  return (
-    <div 
-      className={`page-transition ${isVisible ? 'opacity-100' : 'opacity-0'}`}
-      style={{ 
-        transition: 'opacity 0.2s ease-in-out',
-        minHeight: '100vh',
-        backgroundColor: '#000000'
-      }}
-    >
-      {children}
-    </div>
-  );
-};
-
 function App() {
   const [isPositionsModalOpen, setIsPositionsModalOpen] = useState(false);
+  const [isProductsModalOpen, setIsProductsModalOpen] = useState(false);
 
   const openPositionsModal = () => setIsPositionsModalOpen(true);
   const closePositionsModal = () => setIsPositionsModalOpen(false);
+  
+  const openProductsModal = () => setIsProductsModalOpen(true);
+  const closeProductsModal = () => setIsProductsModalOpen(false);
 
   const modalValue = {
     isPositionsModalOpen,
     openPositionsModal,
     closePositionsModal,
+    isProductsModalOpen,
+    openProductsModal,
+    closeProductsModal,
   };
 
   return (
@@ -88,12 +71,13 @@ function App() {
             isOpen={isPositionsModalOpen} 
             onClose={closePositionsModal} 
           />
-          <PageTransition>
-            <Routes>
-              <Route path="/" element={<LandingPage />} />
-              <Route path="/products" element={<ProductsPage />} />
-            </Routes>
-          </PageTransition>
+          <ProductsModal 
+            isOpen={isProductsModalOpen} 
+            onClose={closeProductsModal} 
+          />
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+          </Routes>
         </ModalContext.Provider>
       </BrowserRouter>
     </div>

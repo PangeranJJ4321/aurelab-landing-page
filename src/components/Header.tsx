@@ -2,97 +2,40 @@ import { useState } from "react";
 import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
 import { LogoAureLab } from "@/assets/export";
-import { useNavigate, useLocation } from "react-router-dom";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isNavigating, setIsNavigating] = useState(false);
-  const navigate = useNavigate();
-  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   const handleNavClick = (elementId: string) => {
-    // Jika di halaman Products atau Positions, navigasi ke home dulu
-    if (location.pathname === '/products' || location.pathname.startsWith('/positions')) {
-      setIsNavigating(true);
-      navigate('/');
-      // Delay untuk memastikan halaman home sudah load
-      setTimeout(() => {
-        const element = document.getElementById(elementId);
-        if (element) {
-          const elementPosition = element.offsetTop - 80;
-          window.scrollTo({
-            top: elementPosition,
-            behavior: 'smooth'
-          });
-        }
-        setIsNavigating(false);
-      }, 500);
-    } else {
-      // Jika sudah di home, langsung scroll
-      const element = document.getElementById(elementId);
-      if (element) {
-        const elementPosition = element.offsetTop - 80;
-        window.scrollTo({
-          top: elementPosition,
-          behavior: 'smooth'
-        });
-      }
+    const element = document.getElementById(elementId);
+    if (element) {
+      const elementPosition = element.offsetTop - 80;
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
     }
     setIsMenuOpen(false);
   };
 
-  const handleProductsClick = () => {
-    setIsNavigating(true);
-    navigate('/products');
-    setIsMenuOpen(false);
-    setTimeout(() => setIsNavigating(false), 500);
-  };
-
-  const handlePositionsClick = () => {
-    setIsNavigating(true);
-    navigate('/positions');
-    setIsMenuOpen(false);
-    setTimeout(() => setIsNavigating(false), 500);
-  };
-
   const handleGetStartedClick = () => {
-    if (location.pathname === '/products' || location.pathname.startsWith('/positions')) {
-      // Jika di halaman Products atau Positions, navigasi ke home dan scroll ke Technology Evolution Path
-      setIsNavigating(true);
-      navigate('/');
-      setTimeout(() => {
-        const element = document.getElementById('product-development');
-        if (element) {
-          const elementPosition = element.offsetTop - 80;
-          window.scrollTo({
-            top: elementPosition,
-            behavior: 'smooth'
-          });
-        }
-        setIsNavigating(false);
-      }, 500);
-    } else {
-      // Jika di home, langsung scroll ke Technology Evolution Path
-      const element = document.getElementById('product-development');
-      if (element) {
-        const elementPosition = element.offsetTop - 80;
-        window.scrollTo({
-          top: elementPosition,
-          behavior: 'smooth'
-        });
-      }
+    const element = document.getElementById('product-development');
+    if (element) {
+      const elementPosition = element.offsetTop - 80;
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
     }
     setIsMenuOpen(false);
   };
 
   return (
-    <header className={`bg-black/95 backdrop-blur-lg border-b border-[#dfaa1a]/20 sticky top-0 z-50 transition-all duration-300 ${
-      isNavigating ? 'opacity-75' : 'opacity-100'
-    }`}>
+    <header className="bg-black/95 backdrop-blur-lg border-b border-[#dfaa1a]/20 sticky top-0 z-50 transition-all duration-300">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
@@ -113,25 +56,10 @@ export const Header = () => {
           <nav className="hidden md:flex space-x-8 text-white">
             <button
               onClick={() => handleNavClick('home')}
-              className={`transition-all duration-300 relative group cursor-pointer ${
-                location.pathname === '/' ? 'text-[#dfaa1a]' : 'text-white hover:text-[#dfaa1a]'
-              }`}
+              className="transition-all duration-300 relative group cursor-pointer text-white hover:text-[#dfaa1a]"
             >
               Home
-              <div className={`absolute bottom-0 left-0 h-0.5 bg-[#dfaa1a] transition-all duration-300 ${
-                location.pathname === '/' ? 'w-full' : 'w-0 group-hover:w-full'
-              }`}></div>
-            </button>
-            <button
-              onClick={handleProductsClick}
-              className={`transition-all duration-300 relative group cursor-pointer ${
-                location.pathname === '/products' ? 'text-[#dfaa1a]' : 'text-gray-300 hover:text-[#dfaa1a]'
-              }`}
-            >
-              Products
-              <div className={`absolute bottom-0 left-0 h-0.5 bg-[#dfaa1a] transition-all duration-300 ${
-                location.pathname === '/products' ? 'w-full' : 'w-0 group-hover:w-full'
-              }`}></div>
+              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#dfaa1a] transition-all duration-300 group-hover:w-full"></div>
             </button>
             <button
               onClick={() => handleNavClick('about')}
@@ -184,27 +112,9 @@ export const Header = () => {
             <nav className="flex flex-col space-y-4">
               <button
                 onClick={() => handleNavClick('home')}
-                className={`transition-colors duration-300 py-2 text-left cursor-pointer ${
-                  location.pathname === '/' ? 'text-[#dfaa1a]' : 'text-gray-300 hover:text-[#dfaa1a]'
-                }`}
+                className="transition-colors duration-300 py-2 text-left cursor-pointer text-gray-300 hover:text-[#dfaa1a]"
               >
                 Home
-              </button>
-              <button
-                onClick={handleProductsClick}
-                className={`transition-colors duration-300 py-2 text-left cursor-pointer ${
-                  location.pathname === '/products' ? 'text-[#dfaa1a]' : 'text-gray-300 hover:text-[#dfaa1a]'
-                }`}
-              >
-                Products
-              </button>
-              <button
-                onClick={handlePositionsClick}
-                className={`transition-colors duration-300 py-2 text-left cursor-pointer ${
-                  location.pathname.startsWith('/positions') ? 'text-[#dfaa1a]' : 'text-gray-300 hover:text-[#dfaa1a]'
-                }`}
-              >
-                Karir
               </button>
               <button
                 onClick={() => handleNavClick('about')}

@@ -1,9 +1,9 @@
 import { Button } from "../../components/ui/button";
 import { ArrowRight, Code, Smartphone, Globe, Cpu, Zap } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useModal } from "../../App";
 
 export const HeroSection = () => {
-  const navigate = useNavigate();
+  const { openProductsModal } = useModal();
 
   return (
     <section
@@ -103,7 +103,7 @@ export const HeroSection = () => {
                 variant="outline"
                 size="lg"
                 className="border-[#dfaa1a] cursor-pointer text-[#dfaa1a] hover:bg-[#dfaa1a] hover:text-black px-8 py-4 text-lg rounded-lg transition-all duration-300 backdrop-blur-sm bg-transparent"
-                onClick={() => navigate('/products')}
+                onClick={openProductsModal}
               >
                 Explore Products
               </Button>
