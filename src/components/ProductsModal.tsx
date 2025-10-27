@@ -126,7 +126,7 @@ export const ProductsModal: React.FC<ProductsModalProps> = ({ isOpen, onClose })
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
-            Our Products
+            Produk Kami
           </h1>
           <div className="flex mt-4 lg:mt-0 items-center justify-end space-x-2 gap-4">
             <button
