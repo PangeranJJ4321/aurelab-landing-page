@@ -1,17 +1,31 @@
-import { BrowserRouter, Routes, Route, useParams, useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { useEffect, useState, createContext, useContext } from "react";
 import { Header } from "./components/Header";
 import { HeroSection } from "./pages/Hero/index";
 import { ProductRoadmap } from "./pages/Roadmap/index";
-import { AboutSection } from "./pages/About/index";
+// import { AboutSection } from "./pages/About/index";
 import { TeamSection } from "./pages/Team/index";
 import { ContactSection } from "./pages/Contact/Index";
 import { ProductsPage } from "./pages/Products/index";
-import Positions from "./pages/Positions/index";
-import PositionDetail from "./pages/PositionDetail/index";
-import Application from "./pages/Application/index";
 import { Footer } from "./components/Footer";
+import { PositionsModal } from "./components/PositionsModal";
 
+// Create context for modal state
+interface ModalContextType {
+  isPositionsModalOpen: boolean;
+  openPositionsModal: () => void;
+  closePositionsModal: () => void;
+}
+
+const ModalContext = createContext<ModalContextType | undefined>(undefined);
+
+export const useModal = () => {
+  const context = useContext(ModalContext);
+  if (!context) {
+    throw new Error('useModal must be used within ModalProvider');
+  }
+  return context;
+};
 
 const LandingPage = () => {
   return (
@@ -19,7 +33,7 @@ const LandingPage = () => {
       <Header />
       <HeroSection />
       <ProductRoadmap />
-      <AboutSection />
+      {/* <AboutSection /> */}
       <TeamSection />
       <ContactSection />
       <Footer />
@@ -55,34 +69,35 @@ const PageTransition = ({ children }: { children: React.ReactNode }) => {
 };
 
 function App() {
+  const [isPositionsModalOpen, setIsPositionsModalOpen] = useState(false);
+
+  const openPositionsModal = () => setIsPositionsModalOpen(true);
+  const closePositionsModal = () => setIsPositionsModalOpen(false);
+
+  const modalValue = {
+    isPositionsModalOpen,
+    openPositionsModal,
+    closePositionsModal,
+  };
+
   return (
     <div className="App bg-black min-h-screen">
       <BrowserRouter>
-        <PageTransition>
-          <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/products" element={<ProductsPage />} />
-            <Route path="/positions" element={<Positions />} />
-            <Route path="/positions/:id" element={<PositionDetailWrapper />} />
-            <Route path="/apply" element={<ApplicationWrapper />} />
-            <Route path="/apply/:id" element={<ApplicationWrapper />} />
-          </Routes>
-        </PageTransition>
+        <ModalContext.Provider value={modalValue}>
+          <PositionsModal 
+            isOpen={isPositionsModalOpen} 
+            onClose={closePositionsModal} 
+          />
+          <PageTransition>
+            <Routes>
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/products" element={<ProductsPage />} />
+            </Routes>
+          </PageTransition>
+        </ModalContext.Provider>
       </BrowserRouter>
     </div>
   );
 }
-
-// Wrapper component to extract position ID from URL params
-const PositionDetailWrapper = () => {
-  const { id } = useParams<{ id: string }>();
-  return <PositionDetail positionId={id || ''} />;
-};
-
-// Wrapper component for Application page
-const ApplicationWrapper = () => {
-  const { id } = useParams<{ id: string }>();
-  return <Application positionId={id} />;
-};
 
 export default App;

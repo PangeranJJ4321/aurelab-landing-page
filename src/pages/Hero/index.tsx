@@ -63,22 +63,21 @@ export const HeroSection = () => {
               <div className="inline-flex items-center space-x-2 bg-[#dfaa1a]/10 border border-[#dfaa1a]/30 rounded-full px-4 py-2">
                 <Zap className="h-4 w-4 text-[#dfaa1a]" />
                 <span className="text-[#dfaa1a] text-sm font-medium">
-                  Next-Gen Technology Lab
+                  Ignite the Unseen
                 </span>
               </div>
 
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                <span className="text-white">Innovating Apps</span>
-                <span className="text-white"> Empowering</span>
+                <span className="text-white">Menyalakan Potensi yang </span>
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#dfaa1a] via-yellow-400 to-[#dfaa1a] animate-pulse">
-                  Futures
+                  Belum Terlihat
                 </span>
               </h1>
 
               <p className="text-xl text-gray-300 leading-relaxed max-w-2xl">
-                AureLab adalah laboratorium pengembangan teknologi digital yang
-                menghadirkan solusi inovatif untuk transformasi digital masa
-                depan dengan teknologi terdepan.
+                Kami percaya setiap individu layak mendapat ruang untuk tumbuh dan bersinar. 
+                Dengan teknologi yang inklusif dan berempati, kami membantu mereka yang 
+                belum terlihat agar lebih berdaya.
               </p>
             </div>
 
@@ -96,7 +95,7 @@ export const HeroSection = () => {
                   }
                 }}
               >
-                Get Started
+                Pelajari Misi Kami
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
                 <div className="absolute inset-0 bg-gradient-to-r from-[#dfaa1a] to-yellow-500 rounded-lg blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
               </Button>
@@ -140,7 +139,7 @@ export const HeroSection = () => {
           </div>
 
           {/* Right Content - Futuristic Mockup */}
-          <div className="relative">
+          <div className="relative hidden lg:block">
             {/* Main Device Frame */}
             <div className="relative z-10 mx-auto max-w-sm">
               <div className="relative bg-gradient-to-b from-gray-900 to-black rounded-3xl p-2 shadow-2xl border border-[#dfaa1a]/30">
@@ -236,6 +235,39 @@ export const HeroSection = () => {
             {/* Circuit Lines */}
             <div className="absolute top-1/2 -right-20 w-32 h-0.5 bg-gradient-to-r from-[#dfaa1a] to-transparent opacity-30"></div>
             <div className="absolute top-1/3 -left-20 w-24 h-0.5 bg-gradient-to-l from-[#dfaa1a] to-transparent opacity-30"></div>
+          </div>
+        </div>
+      </div>
+
+      {/* Section 1 & 2 Content */}
+      <div className="bg-gradient-to-b from-[#dfaa1a] to-yellow-500 py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Section 1: Mengapa Kami Ada? */}
+            <div className="space-y-4">
+              <h2 className="text-3xl font-bold text-black">
+                Mengapa Kami Ada?
+              </h2>
+              <p className="text-lg text-black leading-relaxed">
+                Di tengah kemajuan teknologi yang serba cepat, masih banyak yang tertinggal, mereka yang belum terjangkau oleh sistem yang seharusnya melayani semua. AureLab hadir untuk menjembatani kesenjangan yang sering terabaikan.
+              </p>
+              <p className="text-lg text-black leading-relaxed">
+                Kami percaya teknologi seharusnya bekerja untuk manusia, bukan sebaliknya. Misi kami sederhana: Menciptakan solusi digital yang inklusif agar setiap orang bisa tumbuh dan berdaya lewat teknologi.
+              </p>
+            </div>
+
+            {/* Section 2: Dari Inovasi Menuju Dampak Sosial */}
+            <div className="space-y-4">
+              <h2 className="text-3xl font-bold text-black">
+                Dari Inovasi Menuju Dampak Sosial
+              </h2>
+              <p className="text-lg text-black leading-relaxed">
+                Setiap proyek di AureLab berawal dari empati, dari memahami tantangan nyata yang dihadapi manusia di lapangan. Kami merancang sistem yang mempertimbangkan realitas pengguna di lapangan, mulai dari pelajar di sekolah kecil, tenaga kesehatan di daerah terpencil, hingga rekan penyandang disabilitas yang ingin berkarya tanpa batas.
+              </p>
+              <p className="text-lg text-black leading-relaxed">
+                Melalui pendekatan human-centered design, kami tidak hanya menciptakan produk digital. Kami membangun jembatan antara kemampuan dan kesempatan antara teknologi dan kemanusiaan yang saling menguatkan.
+              </p>
+            </div>
           </div>
         </div>
       </div>

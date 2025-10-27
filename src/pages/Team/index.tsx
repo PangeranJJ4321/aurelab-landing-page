@@ -1,9 +1,11 @@
 import { Card, CardContent, CardHeader, CardTitle } from '../../components/ui/card';
 import { Crown, Code, Globe, Users, CheckCircle, Zap, ArrowRight } from 'lucide-react';
 import { mockData } from '../../constants/mock';
+import { useModal } from '../../App';
 
 export const TeamSection = () => {
   const { team } = mockData;
+  const { openPositionsModal } = useModal();
 
   const getIcon = (division:string) => {
     switch (division) {
@@ -164,7 +166,7 @@ export const TeamSection = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button 
-                  onClick={() => window.location.href = '/positions'}
+                  onClick={openPositionsModal}
                   className="relative group bg-gradient-to-r from-[#dfaa1a] to-yellow-500 hover:from-yellow-500 hover:to-[#dfaa1a] text-black font-bold px-8 py-4 rounded-xl text-lg transition-all duration-300 transform hover:scale-105"
                 >
                   View Open Positions
