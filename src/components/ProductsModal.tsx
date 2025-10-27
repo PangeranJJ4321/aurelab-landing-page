@@ -168,8 +168,8 @@ export const ProductsModal: React.FC<ProductsModalProps> = ({ isOpen, onClose })
         {/* Main Content */}
         <div className="bg-gradient-to-br from-gray-900 to-black border border-[#dfaa1a]/30 rounded-2xl p-6 lg:p-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            {/* Left Panel - Product Info */}
-            <div className="space-y-6">
+            {/* Left Panel - Product Info (Desktop: Left, Mobile: Bottom) */}
+            <div className="space-y-6 order-2 lg:order-1">
               <span className="text-sm text-[#dfaa1a] bg-[#dfaa1a]/10 px-3 py-1 rounded-full">
                 {activeTab === "appscript" ? "AppScript Series" : "Next.js Series"}
               </span>
@@ -198,8 +198,8 @@ export const ProductsModal: React.FC<ProductsModalProps> = ({ isOpen, onClose })
               </div>
             </div>
 
-            {/* Right Panel - Product Image */}
-            <div className="relative">
+            {/* Right Panel - Product Image (Desktop: Right, Mobile: Top) */}
+            <div className="relative order-1 lg:order-2">
               <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-6 lg:p-8 border border-[#dfaa1a]/30">
                 <div className="relative">
                   <div className="w-full h-64 lg:h-80 bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl flex items-center justify-center border border-[#dfaa1a]/30">
