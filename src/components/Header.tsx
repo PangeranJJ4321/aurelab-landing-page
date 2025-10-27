@@ -134,17 +134,6 @@ export const Header = () => {
               }`}></div>
             </button>
             <button
-              onClick={handlePositionsClick}
-              className={`transition-all duration-300 relative group cursor-pointer ${
-                location.pathname.startsWith('/positions') ? 'text-[#dfaa1a]' : 'text-gray-300 hover:text-[#dfaa1a]'
-              }`}
-            >
-              Karir
-              <div className={`absolute bottom-0 left-0 h-0.5 bg-[#dfaa1a] transition-all duration-300 ${
-                location.pathname.startsWith('/positions') ? 'w-full' : 'w-0 group-hover:w-full'
-              }`}></div>
-            </button>
-            <button
               onClick={() => handleNavClick('about')}
               className="text-gray-300 hover:text-[#dfaa1a] transition-all duration-300 relative group cursor-pointer"
             >
