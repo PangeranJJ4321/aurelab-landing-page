@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronLeft, ChevronRight, Zap, Check, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, Zap, Check } from "lucide-react";
 
 interface ProductsModalProps {
   isOpen: boolean;
@@ -123,14 +123,6 @@ export const ProductsModal: React.FC<ProductsModalProps> = ({ isOpen, onClose })
       
       {/* Modal Content */}
       <div className="relative bg-black w-full max-w-7xl min-h-[80vh] flex flex-col p-8 overflow-y-auto">
-        {/* Close Button */}
-        <button
-          onClick={onClose}
-          className="absolute top-4 right-4 text-[#dfaa1a] hover:text-white transition-colors duration-300 z-10"
-        >
-          <X size={28} />
-        </button>
-
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
