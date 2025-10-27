@@ -10,7 +10,6 @@ export const ProductsModal: React.FC<ProductsModalProps> = ({ isOpen, onClose })
   const [currentSlide, setCurrentSlide] = useState(0);
   const [activeTab, setActiveTab] = useState("appscript");
   const [isAnimating, setIsAnimating] = useState(false);
-  const [animationDirection, setAnimationDirection] = useState('fade');
 
   const products = [
     {
@@ -72,7 +71,6 @@ export const ProductsModal: React.FC<ProductsModalProps> = ({ isOpen, onClose })
   const nextSlide = () => {
     if (isAnimating) return;
     setIsAnimating(true);
-    setAnimationDirection('right');
     setTimeout(() => {
       setCurrentSlide((prev) => (prev + 1) % products.length);
       setTimeout(() => setIsAnimating(false), 50);
@@ -82,7 +80,6 @@ export const ProductsModal: React.FC<ProductsModalProps> = ({ isOpen, onClose })
   const prevSlide = () => {
     if (isAnimating) return;
     setIsAnimating(true);
-    setAnimationDirection('left');
     setTimeout(() => {
       setCurrentSlide((prev) => (prev - 1 + products.length) % products.length);
       setTimeout(() => setIsAnimating(false), 50);
@@ -92,7 +89,6 @@ export const ProductsModal: React.FC<ProductsModalProps> = ({ isOpen, onClose })
   const goToSlide = (index: number) => {
     if (isAnimating || index === currentSlide) return;
     setIsAnimating(true);
-    setAnimationDirection(index > currentSlide ? 'right' : 'left');
     setTimeout(() => {
       setCurrentSlide(index);
       setTimeout(() => setIsAnimating(false), 50);
@@ -102,7 +98,6 @@ export const ProductsModal: React.FC<ProductsModalProps> = ({ isOpen, onClose })
   const handleTabChange = (tab: string) => {
     if (isAnimating || tab === activeTab) return;
     setIsAnimating(true);
-    setAnimationDirection('fade');
     setTimeout(() => {
       setActiveTab(tab);
       setTimeout(() => setIsAnimating(false), 50);
