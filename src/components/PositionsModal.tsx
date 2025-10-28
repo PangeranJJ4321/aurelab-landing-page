@@ -24,8 +24,8 @@ export const PositionsModal: React.FC<PositionsModalProps> = ({ isOpen, onClose 
   const filteredPositions = useMemo(() => {
     return mockData.positions.filter((position: Position) => {
       const matchesSearch = position.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                          position.description.toLowerCase().includes(searchTerm.toLowerCase());
-      
+        position.description.toLowerCase().includes(searchTerm.toLowerCase());
+
       return matchesSearch;
     });
   }, [searchTerm]);
@@ -35,26 +35,26 @@ export const PositionsModal: React.FC<PositionsModalProps> = ({ isOpen, onClose 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       {/* Backdrop */}
-      <div 
+      <div
         className="absolute inset-0 bg-black/90"
         onClick={onClose}
       />
-      
+
       {/* Modal Content */}
-      <div className="relative bg-black w-full max-w-7xl min-h-[80vh] flex flex-col p-8">
+      <div className="relative bg-black w-full max-w-5xl min-h-[80vh] flex flex-col p-8">
         {/* Search Section */}
         <div className="w-full mb-8 flex justify-end">
-  <div className="flex items-center border-2 border-[#dfaa1a] rounded-lg px-4 py-3 bg-black w-full max-w-md">
-    <input
-      type="text"
-      placeholder="Cari posisi...."
-      value={searchTerm}
-      onChange={(e) => setSearchTerm(e.target.value)}
-      className="flex-1 bg-transparent text-white placeholder-[#dfaa1a] focus:outline-none"
-    />
-    <Search className="text-[#dfaa1a] ml-2" size={24} />
-  </div>
-</div>
+          <div className="flex items-center border-2 border-[#dfaa1a] rounded-lg px-4 py-3 bg-black w-full max-w-md">
+            <input
+              type="text"
+              placeholder="Cari posisi...."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="flex-1 bg-transparent text-white placeholder-[#dfaa1a] focus:outline-none"
+            />
+            <Search className="text-[#dfaa1a] ml-2" size={24} />
+          </div>
+        </div>
 
 
         {/* Main Content Area */}

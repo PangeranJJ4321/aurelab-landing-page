@@ -240,7 +240,7 @@ export const HeroSection = () => {
       </div>
 
       {/* Section 1 & 2 Content */}
-      <div className="bg-gradient-to-b from-[#dfaa1a] to-yellow-500 py-20">
+      <div className="bg-gradient-to-b from-[#dfaa1a] to-yellow-500 py-20 mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Section 1: Mengapa Kami Ada? */}
