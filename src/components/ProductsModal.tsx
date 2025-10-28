@@ -18,6 +18,7 @@ export const ProductsModal: React.FC<ProductsModalProps> = ({ isOpen, onClose })
       id: 1,
       title: "LANDING PAGE PORTOFOLIO",
       description: "Template landing page AppScript Series untuk portofolio profesional (karya, proyek) tanpa perlu pengalaman teknis. Konten dapat dikelola langsung dari Google Sheets dan otomatis ditampilkan di landing page.",
+      image: "/5.png",
       features: [
         "Ubah Tulisan",
         "Ubah Warna Tema", 
@@ -36,6 +37,7 @@ export const ProductsModal: React.FC<ProductsModalProps> = ({ isOpen, onClose })
       id: 2,
       title: "LANDING PAGE KATALOG PRODUK",
       description: "Sistem katalog online siap pakai dari AppScript Series yang otomatis menampilkan data produk dari Google Sheets. Anda dapat mengupdate informasi produk (nama, harga, foto, kategori) di spreadsheet, dan halaman katalog akan terupdate otomatis tanpa perlu desain ulang atau edit manual.",
+      image: "/6.png",
       features: [
         "Ubah Tulisan",
         "Ubah Warna Tema", 
@@ -54,6 +56,7 @@ export const ProductsModal: React.FC<ProductsModalProps> = ({ isOpen, onClose })
       id: 3,
       title: "LANDING PAGE CAMPAIGN/EVENT",
       description: "Landingpage AppScript Series dari Aurelab membantu Anda membuat landing page untuk event, webinar, atau promosi bisnis dengan cepat. Semua dapat dikelola dengan efisien dan fleksibel via Google Sheets, siap menarik lebih banyak lead.",
+      image: "/7.png",
       features: [
         "Ubah Tulisan",
         "Ubah Warna Tema", 
@@ -67,6 +70,63 @@ export const ProductsModal: React.FC<ProductsModalProps> = ({ isOpen, onClose })
       originalPrice: "Rp 679.000",
       discountedPrice: "Rp 99.000",
       discount: "85% OFF"
+    },
+    {
+      id: 4,
+      title: "LANDING PAGE BISNIS",
+      description: "Template landing page AppScript Series untuk bisnis profesional dengan sistem manajemen konten yang mudah. Dapatkan landing page yang menarik dan profesional untuk meningkatkan konversi bisnis Anda.",
+      image: "/8.png",
+      features: [
+        "Ubah Tulisan",
+        "Ubah Warna Tema", 
+        "Ubah Gambar",
+        "Ubah CTA",
+        "Ubah Layout",
+        "Proyek Tidak Terbatas",
+        "Hanya Sekali Bayar",
+        "Dan masih banyak lagi"
+      ],
+      originalPrice: "Rp 679.000",
+      discountedPrice: "Rp 99.000",
+      discount: "85% OFF"
+    },
+    {
+      id: 5,
+      title: "NEXT.JS PORTFOLIO TEMPLATE",
+      description: "Template portfolio modern menggunakan Next.js dengan performa tinggi dan SEO yang optimal. Cocok untuk developer, designer, atau profesional yang ingin showcase karya mereka dengan teknologi terdepan.",
+      image: "/9.png",
+      features: [
+        "Next.js 14",
+        "TypeScript Support",
+        "SEO Optimized",
+        "Responsive Design",
+        "Dark/Light Mode",
+        "CMS Integration",
+        "Performance Optimized",
+        "Modern UI/UX"
+      ],
+      originalPrice: "Rp 1.299.000",
+      discountedPrice: "Rp 199.000",
+      discount: "85% OFF"
+    },
+    {
+      id: 6,
+      title: "NEXT.JS E-COMMERCE TEMPLATE",
+      description: "Template e-commerce lengkap menggunakan Next.js dengan fitur modern seperti payment gateway, inventory management, dan admin dashboard. Siap untuk bisnis online yang serius.",
+      image: "/10.png",
+      features: [
+        "Next.js 14",
+        "Payment Gateway",
+        "Admin Dashboard",
+        "Inventory Management",
+        "User Authentication",
+        "Order Tracking",
+        "Mobile Responsive",
+        "Performance Optimized"
+      ],
+      originalPrice: "Rp 1.999.000",
+      discountedPrice: "Rp 299.000",
+      discount: "85% OFF"
     }
   ];
 
@@ -74,7 +134,7 @@ export const ProductsModal: React.FC<ProductsModalProps> = ({ isOpen, onClose })
     if (isAnimating) return;
     setIsAnimating(true);
     setTimeout(() => {
-      setCurrentSlide((prev) => (prev + 1) % products.length);
+      setCurrentSlide((prev) => (prev + 1) % filteredProducts.length);
       setTimeout(() => setIsAnimating(false), 50);
     }, 300);
   };
@@ -83,7 +143,7 @@ export const ProductsModal: React.FC<ProductsModalProps> = ({ isOpen, onClose })
     if (isAnimating) return;
     setIsAnimating(true);
     setTimeout(() => {
-      setCurrentSlide((prev) => (prev - 1 + products.length) % products.length);
+      setCurrentSlide((prev) => (prev - 1 + filteredProducts.length) % filteredProducts.length);
       setTimeout(() => setIsAnimating(false), 50);
     }, 300);
   };
@@ -102,6 +162,7 @@ export const ProductsModal: React.FC<ProductsModalProps> = ({ isOpen, onClose })
     setIsAnimating(true);
     setTimeout(() => {
       setActiveTab(tab);
+      setCurrentSlide(0); // Reset to first slide when changing tabs
       setTimeout(() => setIsAnimating(false), 50);
     }, 300);
   };
@@ -134,7 +195,16 @@ export const ProductsModal: React.FC<ProductsModalProps> = ({ isOpen, onClose })
     setTouchEnd(null);
   };
 
-  const currentProduct = products[currentSlide];
+  // Filter products based on active tab
+  const filteredProducts = products.filter(product => {
+    if (activeTab === "appscript") {
+      return product.id <= 4; // Products 1-4 are AppScript
+    } else {
+      return product.id >= 5; // Products 5-6 are Next.js
+    }
+  });
+
+  const currentProduct = filteredProducts[currentSlide % filteredProducts.length];
 
   if (!isOpen) return null;
 
@@ -147,7 +217,16 @@ export const ProductsModal: React.FC<ProductsModalProps> = ({ isOpen, onClose })
       />
       
       {/* Modal Content */}
-      <div className="relative bg-black w-full max-w-7xl mt-23 mb-8 lg:my-32 mx-4 flex flex-col p-4 lg:p-8 z-10 border border-[#dfaa1a]/20 rounded-xl">
+      <div className="relative bg-black w-full max-w-6xl mt-23 mb-8 lg:my-32 mx-4 flex flex-col p-4 lg:p-8 z-10 border border-[#dfaa1a]/20 rounded-xl">
+        {/* Back Button - Desktop Only, Outside Modal */}
+        <button
+          onClick={onClose}
+          className="hidden lg:flex items-center mt-5 gap-2 text-[#dfaa1a] hover:text-yellow-400 transition-colors duration-300 group absolute -top-16 left-0"
+        >
+          <ArrowLeft className="h-5 w-5 group-hover:-translate-x-1 transition-transform duration-300" />
+          <span className="font-medium">Kembali</span>
+        </button>
+
         {/* Close Button - Mobile Only */}
         <button
           onClick={onClose}
@@ -158,16 +237,7 @@ export const ProductsModal: React.FC<ProductsModalProps> = ({ isOpen, onClose })
 
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6 relative z-10 bg-black pr-14 lg:pr-0">
-          <div className="flex items-center gap-4">
-            {/* Back Button - Desktop Only */}
-            <button
-              onClick={onClose}
-              className="hidden lg:flex items-center gap-2 text-[#dfaa1a] hover:text-yellow-400 transition-colors duration-300 group"
-            >
-              <ArrowLeft className="h-5 w-5 group-hover:-translate-x-1 transition-transform duration-300" />
-              <span className="font-medium">Kembali</span>
-            </button>
-            
+          <div className="flex flex-col gap-2">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
               Produk Kami
             </h1>
@@ -257,12 +327,12 @@ export const ProductsModal: React.FC<ProductsModalProps> = ({ isOpen, onClose })
             <div className="relative order-1 lg:order-2">
               <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-6 lg:p-8 border border-[#dfaa1a]/30">
                 <div className="relative">
-                  <div className="w-full h-64 lg:h-80 bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl flex items-center justify-center border border-[#dfaa1a]/30">
-                    <div className="text-center">
-                      <div className="text-6xl mb-4">🖥️</div>
-                      <div className="text-white text-lg font-medium">Product Preview</div>
-                      <div className="text-gray-400 text-sm">Coming Soon</div>
-                    </div>
+                  <div className="w-full h-64 lg:h-80 rounded-xl overflow-hidden border border-[#dfaa1a]/30">
+                    <img 
+                      src={currentProduct.image} 
+                      alt={currentProduct.title}
+                      className="w-full h-full object-cover object-top"
+                    />
                   </div>
                   
                   <div className="absolute -top-2 -right-2 w-16 h-16 bg-[#dfaa1a]/20 rounded-full flex items-center justify-center">
@@ -297,7 +367,7 @@ export const ProductsModal: React.FC<ProductsModalProps> = ({ isOpen, onClose })
           {/* Bottom Navigation Dots */}
           <div className="flex justify-center mt-8">
             <div className="flex space-x-3">
-              {products.map((_, index) => (
+              {filteredProducts.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
