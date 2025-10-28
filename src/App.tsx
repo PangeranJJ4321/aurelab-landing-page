@@ -9,6 +9,7 @@ import { ContactSection } from "./pages/Contact/Index";
 import { Footer } from "./components/Footer";
 import { PositionsModal } from "./components/PositionsModal";
 import { ProductsModal } from "./components/ProductsModal";
+import ProductsCarousel from "./pages/Products";
 
 // Create context for modal state
 interface ModalContextType {
@@ -37,6 +38,7 @@ const LandingPage = () => {
       <HeroSection />
       <ProductRoadmap />
       {/* <AboutSection /> */}
+      <ProductsCarousel />
       <TeamSection />
       <ContactSection />
       <Footer />
