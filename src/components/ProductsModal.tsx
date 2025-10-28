@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronLeft, ChevronRight, Zap, Check, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, Zap, Check, X, ArrowLeft } from "lucide-react";
 
 interface ProductsModalProps {
   isOpen: boolean;
@@ -158,9 +158,21 @@ export const ProductsModal: React.FC<ProductsModalProps> = ({ isOpen, onClose })
 
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6 relative z-10 bg-black pr-14 lg:pr-0">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
-            Produk Kami
-          </h1>
+          <div className="flex items-center gap-4">
+            {/* Back Button - Desktop Only */}
+            <button
+              onClick={onClose}
+              className="hidden lg:flex items-center gap-2 text-[#dfaa1a] hover:text-yellow-400 transition-colors duration-300 group"
+            >
+              <ArrowLeft className="h-5 w-5 group-hover:-translate-x-1 transition-transform duration-300" />
+              <span className="font-medium">Kembali</span>
+            </button>
+            
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+              Produk Kami
+            </h1>
+          </div>
+          
           <div className="hidden lg:flex mt-4 lg:mt-0 items-center justify-end space-x-2 gap-4">
             <button
               onClick={prevSlide}
