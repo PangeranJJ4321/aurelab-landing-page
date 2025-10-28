@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Search } from 'lucide-react';
+import { Search, ArrowLeft } from 'lucide-react';
 import { mockData } from '../constants/mock';
 
 interface Position {
@@ -41,7 +41,18 @@ export const PositionsModal: React.FC<PositionsModalProps> = ({ isOpen, onClose 
       />
 
       {/* Modal Content */}
-      <div className="relative bg-black w-full max-w-5xl min-h-[80vh] flex flex-col p-8">
+      <div className="relative bg-black w-full max-w-5xl min-h-[80vh] flex flex-col p-8 mt-10">
+        {/* Header with Back Button */}
+        <div className="flex items-center justify-between mb-6 ">
+          <button
+            onClick={onClose}
+            className="flex items-center gap-2 text-[#dfaa1a] hover:text-yellow-400 transition-colors duration-300 group"
+          >
+            <ArrowLeft className="h-5 w-5 group-hover:-translate-x-1 transition-transform duration-300" />
+            <span className="font-medium">Kembali</span>
+          </button>{/* Spacer untuk centering */}
+        </div>
+
         {/* Search Section */}
         <div className="w-full mb-8 flex justify-end">
           <div className="flex items-center border-2 border-[#dfaa1a] rounded-lg px-4 py-3 bg-black w-full max-w-md">
