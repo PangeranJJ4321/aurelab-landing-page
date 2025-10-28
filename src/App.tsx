@@ -3,7 +3,7 @@ import { useState, createContext, useContext } from "react";
 import { Header } from "./components/Header";
 import { HeroSection } from "./pages/Hero/index";
 import { ProductRoadmap } from "./pages/Roadmap/index";
-// import { AboutSection } from "./pages/About/index";
+import { AboutSection } from "./pages/About/index.tsx";
 import { TeamSection } from "./pages/Team/index";
 import { ContactSection } from "./pages/Contact/Index";
 import { Footer } from "./components/Footer";
@@ -35,8 +35,8 @@ const LandingPage = () => {
     <div className="bg-black min-h-screen">
       <Header />
       <HeroSection />
+      <AboutSection />
       <ProductRoadmap />
-      {/* <AboutSection /> */}
       <TeamSection />
       <ContactSection />
       <Footer />

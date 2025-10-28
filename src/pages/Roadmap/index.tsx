@@ -5,35 +5,35 @@ export const ProductRoadmap = () => {
   const roadmapPhases = [
     {
       phase: "Phase 1",
-      title: "AppScript Solutions",
-      description: "Fokus pada pengembangan AppScript untuk pasar menengah ke bawah dengan automasi workflow dan integrasi Google Workspace.",
+      title: "Educational Automation",
+      description: "Kami memulai perjalanan dengan membantu sekolah dan lembaga pendidikan kecil melakukan digitalisasi sederhana melalui sistem otomatisasi. Langkah ini bukan sekadar efisiensi. Ia membuka akses agar guru dan pelajar bisa fokus pada pembelajaran, bukan administrasi.",
       icon: Zap,
       status: "current",
-      features: ["Google Apps Script", "Workflow Automation", "Cloud Integration", "Business Process Optimization"]
+      features: ["Digitalisasi Sekolah", "Sistem Otomatisasi", "Fokus Pembelajaran", "Efisiensi Administrasi"]
     },
     {
       phase: "Phase 2", 
-      title: "Web & Mobile Apps",
-      description: "Ekspansi ke pengembangan website responsif dan aplikasi mobile native dengan teknologi modern.",
+      title: "Digital Inclusion",
+      description: "Kami memperluas jangkauan untuk UMKM, komunitas, dan organisasi sosial agar dapat memiliki ruang digital yang setara. Melalui solusi landing page dan sistem daring yang mudah diakses, kami berupaya mengurangi kesenjangan digital dan mendorong partisipasi inklusif.",
       icon: Smartphone,
       status: "next",
-      features: ["React & Next.js", "React Native", "Progressive Web Apps", "Cross-platform Development"]
+      features: ["UMKM Digital", "Landing Page", "Sistem Daring", "Partisipasi Inklusif"]
     },
     {
       phase: "Phase 3",
-      title: "Professional Software",
-      description: "Pengembangan software aplikasi profesional dan enterprise solutions dengan arsitektur scalable.",
+      title: "Accessible Software",
+      description: "Pada tahap ini, kami berfokus pada pengembangan perangkat lunak yang ramah pengguna dan inklusif bagi semua kalangan, termasuk penyandang disabilitas. Kami percaya, teknologi terbaik adalah yang memahami keterbatasan manusia dan mengubahnya menjadi kekuatan.",
       icon: Layers,
       status: "future",
-      features: ["Enterprise Solutions", "Microservices", "Cloud Architecture", "Custom Software"]
+      features: ["Software Ramah Pengguna", "Aksesibilitas", "Inklusivitas", "Teknologi untuk Disabilitas"]
     },
     {
       phase: "Phase 4",
-      title: "IoT Innovation",
-      description: "Eksplorasi dan implementasi teknologi Internet of Things untuk sistem cerdas dan automasi industri.",
+      title: "IoT for Humanity",
+      description: "Langkah berikutnya adalah menjelajahi potensi Internet of Things (IoT) untuk menciptakan sistem cerdas yang bermanfaat bagi sektor sosial dan kesehatan. Bagi kami, teknologi cerdas bukan soal otomatisasi, tapi tentang menghadirkan hidup yang lebih aman, sehat, dan bermartabat.",
       icon: Cpu,
       status: "research",
-      features: ["Smart Devices", "Industrial IoT", "Edge Computing", "AI Integration"]
+      features: ["IoT Sosial", "Sistem Cerdas", "Teknologi Kesehatan", "Kehidupan Bermartabat"]
     }
   ];
 
@@ -87,18 +87,20 @@ export const ProductRoadmap = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-[#dfaa1a]/10 border border-[#dfaa1a]/30 rounded-full px-4 py-2 mb-6">
             <Globe className="h-4 w-4 text-[#dfaa1a]" />
-            <span className="text-[#dfaa1a] text-sm font-medium">Product Development Roadmap</span>
+            <span className="text-[#dfaa1a] text-sm font-medium">Our Technology Journey</span>
           </div>
           
           <h2 className="text-4xl lg:text-6xl font-bold mb-6">
             <span className="text-white">Technology</span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#dfaa1a] via-yellow-400 to-[#dfaa1a]">
-              Evolution Path
+            Evolution Path
             </span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Perjalanan inovasi teknologi AureLab dari solusi automation hingga 
-            eksplorasi IoT dengan roadmap yang terstruktur dan sustainable.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-4">
+            Perjalanan kami adalah cerita tentang kemajuan dan kemanusiaan.
+          </p>
+          <p className="text-lg text-gray-400 max-w-4xl mx-auto leading-relaxed">
+            Setiap langkah dalam pengembangan teknologi di AureLab lahir dari keinginan untuk menghadirkan dampak sosial yang nyata. Selain berevolusi secara teknis, kami juga menjadikan teknologi lebih dekat kepada mereka yang sering terpinggirkan.
           </p>
         </div>
 
