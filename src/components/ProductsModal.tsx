@@ -15,120 +15,133 @@ export const ProductsModal: React.FC<ProductsModalProps> = ({ isOpen, onClose })
 
   const products = [
     {
-      id: 1,
-      title: "LANDING PAGE PORTOFOLIO",
-      description: "Template landing page AppScript Series untuk portofolio profesional (karya, proyek) tanpa perlu pengalaman teknis. Konten dapat dikelola langsung dari Google Sheets dan otomatis ditampilkan di landing page.",
+      id: 5,
+      title: "LANDING PAGE EVENT/CAMPAIGN",
+      description:
+        "Landing page AppScript Series untuk event, webinar, atau campaign promosi. Desain responsif, mudah diubah, dan bisa digunakan untuk berbagai acara dengan pengelolaan konten yang fleksibel.",
       image: "/5.png",
       features: [
         "Ubah Tulisan",
-        "Ubah Warna Tema", 
+        "Ubah Warna Tema",
         "Ubah Gambar",
         "Ubah CTA",
         "Ubah Layout",
-        "Proyek Tidak Terbatas",
+        "Konten Tidak Terbatas",
         "Hanya Sekali Bayar",
-        "Dan masih banyak lagi"
+        "Dan masih banyak lagi",
       ],
-      originalPrice: "Rp 679.000",
-      discountedPrice: "Rp 99.000",
-      discount: "85% OFF"
-    },
-    {
-      id: 2,
-      title: "LANDING PAGE KATALOG PRODUK",
-      description: "Sistem katalog online siap pakai dari AppScript Series yang otomatis menampilkan data produk dari Google Sheets. Anda dapat mengupdate informasi produk (nama, harga, foto, kategori) di spreadsheet, dan halaman katalog akan terupdate otomatis tanpa perlu desain ulang atau edit manual.",
-      image: "/6.png",
-      features: [
-        "Ubah Tulisan",
-        "Ubah Warna Tema", 
-        "Ubah Gambar",
-        "Ubah CTA",
-        "Ubah Layout",
-        "Proyek Tidak Terbatas",
-        "Hanya Sekali Bayar",
-        "Dan masih banyak lagi"
-      ],
-      originalPrice: "Rp 679.000",
-      discountedPrice: "Rp 99.000",
-      discount: "85% OFF"
-    },
-    {
-      id: 3,
-      title: "LANDING PAGE CAMPAIGN/EVENT",
-      description: "Landingpage AppScript Series dari Aurelab membantu Anda membuat landing page untuk event, webinar, atau promosi bisnis dengan cepat. Semua dapat dikelola dengan efisien dan fleksibel via Google Sheets, siap menarik lebih banyak lead.",
-      image: "/7.png",
-      features: [
-        "Ubah Tulisan",
-        "Ubah Warna Tema", 
-        "Ubah Gambar",
-        "Ubah CTA",
-        "Ubah Layout",
-        "Proyek Tidak Terbatas",
-        "Hanya Sekali Bayar",
-        "Dan masih banyak lagi"
-      ],
-      originalPrice: "Rp 679.000",
-      discountedPrice: "Rp 99.000",
-      discount: "85% OFF"
-    },
-    {
-      id: 4,
-      title: "LANDING PAGE BISNIS",
-      description: "Template landing page AppScript Series untuk bisnis profesional dengan sistem manajemen konten yang mudah. Dapatkan landing page yang menarik dan profesional untuk meningkatkan konversi bisnis Anda.",
-      image: "/8.png",
-      features: [
-        "Ubah Tulisan",
-        "Ubah Warna Tema", 
-        "Ubah Gambar",
-        "Ubah CTA",
-        "Ubah Layout",
-        "Proyek Tidak Terbatas",
-        "Hanya Sekali Bayar",
-        "Dan masih banyak lagi"
-      ],
-      originalPrice: "Rp 679.000",
-      discountedPrice: "Rp 99.000",
-      discount: "85% OFF"
-    },
-    {
-      id: 5,
-      title: "NEXT.JS PORTFOLIO TEMPLATE",
-      description: "Template portfolio modern menggunakan Next.js dengan performa tinggi dan SEO yang optimal. Cocok untuk developer, designer, atau profesional yang ingin showcase karya mereka dengan teknologi terdepan.",
-      image: "/9.png",
-      features: [
-        "Next.js 14",
-        "TypeScript Support",
-        "SEO Optimized",
-        "Responsive Design",
-        "Dark/Light Mode",
-        "CMS Integration",
-        "Performance Optimized",
-        "Modern UI/UX"
-      ],
-      originalPrice: "Rp 1.299.000",
-      discountedPrice: "Rp 199.000",
-      discount: "85% OFF"
+      price: "Rp 199.000",
+      originalPrice: "Rp 479.000",
+      discount: "85% OFF",
+      series: "AppScript Series",
     },
     {
       id: 6,
-      title: "NEXT.JS E-COMMERCE TEMPLATE",
-      description: "Template e-commerce lengkap menggunakan Next.js dengan fitur modern seperti payment gateway, inventory management, dan admin dashboard. Siap untuk bisnis online yang serius.",
+      title: "LANDING PAGE EVENT/CAMPAIGN (PROMO)",
+      description:
+        "Versi promo besar dari landing page AppScript Series untuk event atau campaign. Cocok untuk instansi, organisasi, dan kegiatan promosi skala besar.",
+      image: "/6.png",
+      features: [
+        "Ubah Tulisan",
+        "Ubah Warna Tema",
+        "Ubah Gambar",
+        "Ubah CTA",
+        "Ubah Layout",
+        "Konten Tidak Terbatas",
+        "Hanya Sekali Bayar",
+        "Dan masih banyak lagi",
+      ],
+      price: "Rp 149.000",
+      originalPrice: "Rp 679.000",
+      discount: "85% OFF",
+      series: "AppScript Series",
+    },
+    {
+      id: 7,
+      title: "LANDING PAGE PORTOFOLIO",
+      description:
+        "Template AppScript Series untuk portofolio profesional, cocok untuk menampilkan karya, profil, dan proyek tanpa coding. Desain elegan, responsif, dan bisa dikelola via Google Sheets.",
+      image: "/7.png",
+      features: [
+        "Ubah Tulisan",
+        "Ubah Warna Tema",
+        "Ubah Gambar",
+        "Ubah CTA",
+        "Ubah Layout",
+        "Proyek Tidak Terbatas",
+        "Hanya Sekali Bayar",
+        "Dan masih banyak lagi",
+      ],
+      price: "Rp 199.000",
+      originalPrice: "Rp 479.000",
+      discount: "85% OFF",
+      series: "AppScript Series",
+    },
+    {
+      id: 8,
+      title: "LANDING PAGE PORTOFOLIO (PROMO)",
+      description:
+        "Promo spesial untuk landing page portofolio profesional. Dapatkan desain premium AppScript Series untuk showcase profilmu dengan harga super hemat.",
+      image: "/8.png",
+      features: [
+        "Ubah Tulisan",
+        "Ubah Warna Tema",
+        "Ubah Gambar",
+        "Ubah CTA",
+        "Ubah Layout",
+        "Proyek Tidak Terbatas",
+        "Hanya Sekali Bayar",
+        "Dan masih banyak lagi",
+      ],
+      price: "Rp 149.000",
+      originalPrice: "Rp 679.000",
+      discount: "85% OFF",
+      series: "AppScript Series",
+    },
+    {
+      id: 9,
+      title: "LANDING PAGE UMKM PROFILE",
+      description:
+        "Landing page profesional untuk profil UMKM, dikembangkan dengan Next.js. Menawarkan branding kuat, SEO optimization, dan keamanan SSL agar bisnis makin dipercaya pelanggan.",
+      image: "/9.png",
+      features: [
+        "Visual Branding",
+        "Copywriting",
+        "QA",
+        "Dark/Light Mode",
+        "Design Custom",
+        "SEO Optimization",
+        "SSL & Security",
+        "Dan masih banyak lagi",
+      ],
+      price: "Rp 999.000",
+      originalPrice: "Rp 1.499.000",
+      discount: "33% OFF",
+      series: "Next.js Series",
+    },
+    {
+      id: 10,
+      title: "LANDING PAGE CUSTOM",
+      description:
+        "Layanan landing page custom dengan Next.js Series. Dirancang khusus sesuai kebutuhan bisnismu—dari tampilan, fitur, hingga branding visual—semua bisa disesuaikan.",
       image: "/10.png",
       features: [
-        "Next.js 14",
-        "Payment Gateway",
-        "Admin Dashboard",
-        "Inventory Management",
-        "User Authentication",
-        "Order Tracking",
-        "Mobile Responsive",
-        "Performance Optimized"
+        "Visual Branding",
+        "Copywriting",
+        "QA",
+        "Dark/Light Mode",
+        "Design Custom",
+        "SEO Optimization",
+        "SSL & Security",
+        "Dan masih banyak lagi",
       ],
-      originalPrice: "Rp 1.999.000",
-      discountedPrice: "Rp 299.000",
-      discount: "85% OFF"
-    }
+      price: "Rp 599.000",
+      originalPrice: "Rp 1.499.000",
+      discount: "60% OFF",
+      series: "Next.js Series",
+    },
   ];
+
 
   const nextSlide = () => {
     if (isAnimating) return;
@@ -178,7 +191,7 @@ export const ProductsModal: React.FC<ProductsModalProps> = ({ isOpen, onClose })
 
   const handleTouchEnd = () => {
     if (!touchStart || !touchEnd) return;
-    
+
     const distance = touchStart - touchEnd;
     const isLeftSwipe = distance > 50;
     const isRightSwipe = distance < -50;
@@ -189,7 +202,7 @@ export const ProductsModal: React.FC<ProductsModalProps> = ({ isOpen, onClose })
     if (isRightSwipe) {
       prevSlide();
     }
-    
+
     // Reset
     setTouchStart(null);
     setTouchEnd(null);
@@ -198,24 +211,24 @@ export const ProductsModal: React.FC<ProductsModalProps> = ({ isOpen, onClose })
   // Filter products based on active tab
   const filteredProducts = products.filter(product => {
     if (activeTab === "appscript") {
-      return product.id <= 4; // Products 1-4 are AppScript
+      return product.id >= 5 && product.id <= 8; // Products 5-8 are AppScript
     } else {
-      return product.id >= 5; // Products 5-6 are Next.js
+      return product.id >= 9; // Products 9-10 are Next.js
     }
   });
 
   const currentProduct = filteredProducts[currentSlide % filteredProducts.length];
 
-  if (!isOpen) return null;
+  if (!isOpen || !currentProduct) return null;
 
   return (
     <div className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto">
       {/* Backdrop */}
-      <div 
+      <div
         className="fixed inset-0 bg-black/90"
         onClick={onClose}
       />
-      
+
       {/* Modal Content */}
       <div className="relative bg-black w-full max-w-6xl mt-23 mb-8 lg:my-32 mx-4 flex flex-col p-4 lg:p-8 z-10 border border-[#dfaa1a]/20 rounded-xl">
         {/* Back Button - Desktop Only, Outside Modal */}
@@ -242,7 +255,7 @@ export const ProductsModal: React.FC<ProductsModalProps> = ({ isOpen, onClose })
               Produk Kami
             </h1>
           </div>
-          
+
           <div className="hidden lg:flex mt-4 lg:mt-0 items-center justify-end space-x-2 gap-4">
             <button
               onClick={prevSlide}
@@ -263,30 +276,26 @@ export const ProductsModal: React.FC<ProductsModalProps> = ({ isOpen, onClose })
         <div className="flex space-x-6 mb-6">
           <button
             onClick={() => handleTabChange("appscript")}
-            className={`text-base font-medium transition-all duration-300 cursor-pointer relative group ${
-              activeTab === "appscript" ? "text-[#dfaa1a]" : "text-gray-400 hover:text-white"
-            }`}
+            className={`text-base font-medium transition-all duration-300 cursor-pointer relative group ${activeTab === "appscript" ? "text-[#dfaa1a]" : "text-gray-400 hover:text-white"
+              }`}
           >
             AppScript Series
-            <div className={`absolute bottom-0 left-0 w-full h-0.5 bg-[#dfaa1a] transition-all duration-300 ${
-              activeTab === "appscript" ? "opacity-100" : "opacity-0 group-hover:opacity-50"
-            }`}></div>
+            <div className={`absolute bottom-0 left-0 w-full h-0.5 bg-[#dfaa1a] transition-all duration-300 ${activeTab === "appscript" ? "opacity-100" : "opacity-0 group-hover:opacity-50"
+              }`}></div>
           </button>
           <button
             onClick={() => handleTabChange("nextjs")}
-            className={`text-base font-medium transition-all duration-300 cursor-pointer relative group ${
-              activeTab === "nextjs" ? "text-[#dfaa1a]" : "text-gray-400 hover:text-white"
-            }`}
+            className={`text-base font-medium transition-all duration-300 cursor-pointer relative group ${activeTab === "nextjs" ? "text-[#dfaa1a]" : "text-gray-400 hover:text-white"
+              }`}
           >
             Next.js Series
-            <div className={`absolute bottom-0 left-0 w-full h-0.5 bg-[#dfaa1a] transition-all duration-300 ${
-              activeTab === "nextjs" ? "opacity-100" : "opacity-0 group-hover:opacity-50"
-            }`}></div>
+            <div className={`absolute bottom-0 left-0 w-full h-0.5 bg-[#dfaa1a] transition-all duration-300 ${activeTab === "nextjs" ? "opacity-100" : "opacity-0 group-hover:opacity-50"
+              }`}></div>
           </button>
         </div>
 
         {/* Main Content */}
-        <div 
+        <div
           className="bg-gradient-to-br from-gray-900 to-black border border-[#dfaa1a]/30 rounded-2xl p-6 lg:p-12"
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
@@ -298,11 +307,11 @@ export const ProductsModal: React.FC<ProductsModalProps> = ({ isOpen, onClose })
               <span className="text-sm text-[#dfaa1a] bg-[#dfaa1a]/10 px-3 py-1 rounded-full">
                 {activeTab === "appscript" ? "AppScript Series" : "Next.js Series"}
               </span>
-              
+
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
                 {currentProduct.title}
               </h2>
-              
+
               <div className="flex items-center space-x-2 text-sm text-gray-300">
                 <span>Landing Page</span>
                 <span>•</span>
@@ -327,23 +336,23 @@ export const ProductsModal: React.FC<ProductsModalProps> = ({ isOpen, onClose })
             <div className="relative order-1 lg:order-2">
               <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-6 lg:p-8 border border-[#dfaa1a]/30">
                 <div className="relative">
-                  <div className="w-full h-64 lg:h-80 rounded-xl overflow-hidden border border-[#dfaa1a]/30">
-                    <img 
-                      src={currentProduct.image} 
+                  <div className="w-full h-64 lg:h-80 rounded-xl overflow-hidden border border-[#dfaa1a]/30 bg-gray-800 flex items-center justify-center">
+                    <img
+                      src={currentProduct.image}
                       alt={currentProduct.title}
-                      className="w-full h-full object-cover object-top"
+                      className="max-w-full max-h-full object-contain"
                     />
                   </div>
-                  
+
                   <div className="absolute -top-2 -right-2 w-16 h-16 bg-[#dfaa1a]/20 rounded-full flex items-center justify-center">
                     <Zap className="h-8 w-8 text-[#dfaa1a]" />
                   </div>
-                  
+
                   <div className="absolute -bottom-2 -left-2 w-12 h-12 bg-[#dfaa1a]/20 rounded-full flex items-center justify-center">
                     <span className="text-2xl">⚡</span>
                   </div>
                 </div>
-
+                
                 <div className="mt-6 text-center">
                   <div className="inline-flex items-center space-x-2 bg-[#dfaa1a] text-black px-4 py-2 rounded-full text-sm font-bold mb-3">
                     <span>NEW PROMO!</span>
@@ -356,30 +365,31 @@ export const ProductsModal: React.FC<ProductsModalProps> = ({ isOpen, onClose })
                       {currentProduct.originalPrice}
                     </div>
                     <div className="text-2xl font-bold text-[#dfaa1a]">
-                      {currentProduct.discountedPrice}
+                      {currentProduct.price}
                     </div>
                   </div>
                 </div>
+               
+
               </div>
             </div>
-          </div>
 
-          {/* Bottom Navigation Dots */}
-          <div className="flex justify-center mt-8">
-            <div className="flex space-x-3">
-              {filteredProducts.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide
+          </div>
+            {/* Bottom Navigation Dots */}
+            <div className="flex justify-center mt-8">
+              <div className="flex space-x-3">
+                {filteredProducts.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => goToSlide(index)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide
                       ? "bg-[#dfaa1a]"
                       : "bg-gray-600 hover:bg-gray-500"
-                  }`}
-                />
-              ))}
+                      }`}
+                  />
+                ))}
+              </div>
             </div>
-          </div>
         </div>
       </div>
     </div>
