@@ -113,6 +113,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-AureLab - [@aurelab](https://twitter.com/aurelab) - contact@aurelab.com
+**AureLab** — [@journey.aurelab](https://www.instagram.com/journey.aurelab/) — 📧 aurelabmarketing@gmail.com
+
 
 Project Link: [https://github.com/PangeranJJ4321/aurelab-landing-page](https://github.com/PangeranJJ4321/aurelab-landing-page)
