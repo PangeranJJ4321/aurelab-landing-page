@@ -60,15 +60,15 @@ export const Footer = () => {
               </div>
               <h3 className="text-xl font-bold text-white">
                 Aure<span className="text-[#dfaa1a]">Lab</span>
-                <span> — Ignite The Unseen</span>
+                <span> — Menyalakan yang Tak Terlihat</span>
               </h3>
             </div>
 
             <p className="text-gray-400 leading-relaxed">
-              Kami percaya, inovasi sejati lahir dari keberanian melihat yang
-              tak terlihat. True innovation begins with the courage to see the
-              unseen. Terhubunglah dengan kami dan jadi bagian dari gerakan
-              menciptakan teknologi yang lebih manusiawi.
+              Kami percaya, inovasi sejati lahir dari keberanian melihat yang tak terlihat. <span className="italic">Inovasi sejati dimulai dari keberanian untuk melihat yang tak terlihat.</span> Terhubunglah dengan kami dan jadi bagian dari gerakan menciptakan teknologi yang lebih manusiawi.
+            </p>
+            <p className="text-gray-400 leading-relaxed mt-2 italic">
+              Kami tidak hanya membangun teknologi untuk manusia — kami membangunnya bersama mereka.
             </p>
 
             {/* Social Media */}
@@ -95,7 +95,7 @@ export const Footer = () => {
           <div>
             <h4 className="text-lg font-bold mb-6 text-white flex items-center gap-2">
               <Code className="h-5 w-5 text-[#dfaa1a]" />
-              Our Services
+              Layanan Kami
             </h4>
             <ul className="space-y-3">
               {contact.services.map((service, index) => (
@@ -116,7 +116,7 @@ export const Footer = () => {
           <div>
             <h4 className="text-lg font-bold mb-6 text-white flex items-center gap-2">
               <Cpu className="h-5 w-5 text-[#dfaa1a]" />
-              Technology Stack
+              Teknologi
             </h4>
             <ul className="space-y-3">
               <li>
@@ -171,7 +171,7 @@ export const Footer = () => {
           <div>
             <h4 className="text-lg font-bold mb-6 text-white flex items-center gap-2">
               <Globe className="h-5 w-5 text-[#dfaa1a]" />
-              Get In Touch
+              Tetap Terhubung dengan Kami
             </h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
@@ -203,11 +203,11 @@ export const Footer = () => {
             {/* Operating Hours */}
             <div className="mt-6 p-4 bg-gradient-to-r from-gray-900/50 to-gray-800/50 rounded-xl border border-gray-800">
               <h5 className="text-sm font-semibold text-[#dfaa1a] mb-2">
-                Operating Hours
+                Jam Operasional
               </h5>
               <div className="text-xs text-gray-400 space-y-1">
-                <p>Mon-Fri: 09:00 - 17:00 WIB</p>
-                <p>Sat-Sun: Closed</p>
+                <p>Senin-Jumat: 09:00–17:00 WIB</p>
+                <p>Sabtu-Minggu: Tutup</p>
               </div>
             </div>
           </div>
@@ -245,9 +245,9 @@ export const Footer = () => {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
             <div className="text-gray-400 text-sm text-center lg:text-left">
-              © {currentYear} AureLab. All rights reserved.
-              <span className="text-[#dfaa1a]"> Innovating the Future</span> of
-              Digital Technology.
+              © {currentYear} AureLab. Hak cipta dilindungi.
+              <span className="text-[#dfaa1a]"> Menyalakan yang Tak Terlihat</span> melalui
+              Teknologi Digital.
             </div>
             {/* Comment out legal links temporarily */}
             {/* 

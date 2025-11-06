@@ -4,32 +4,32 @@ import { Smartphone, Globe, Layers, Cpu, Zap, CheckCircle, ArrowRight } from 'lu
 export const ProductRoadmap = () => {
   const roadmapPhases = [
     {
-      phase: "Phase 1",
-      title: "Educational Automation",
+      phase: "Tahap 1",
+      title: "Otomatisasi Pendidikan",
       description: "Kami memulai perjalanan dengan membantu sekolah dan lembaga pendidikan kecil melakukan digitalisasi sederhana melalui sistem otomatisasi. Langkah ini bukan sekadar efisiensi. Ia membuka akses agar guru dan pelajar bisa fokus pada pembelajaran, bukan administrasi.",
       icon: Zap,
       status: "current",
       features: ["Digitalisasi Sekolah", "Sistem Otomatisasi", "Fokus Pembelajaran", "Efisiensi Administrasi"]
     },
     {
-      phase: "Phase 2", 
-      title: "Digital Inclusion",
+      phase: "Tahap 2", 
+      title: "Inklusi Digital",
       description: "Kami memperluas jangkauan untuk UMKM, komunitas, dan organisasi sosial agar dapat memiliki ruang digital yang setara. Melalui solusi landing page dan sistem daring yang mudah diakses, kami berupaya mengurangi kesenjangan digital dan mendorong partisipasi inklusif.",
       icon: Smartphone,
       status: "next",
       features: ["UMKM Digital", "Landing Page", "Sistem Daring", "Partisipasi Inklusif"]
     },
     {
-      phase: "Phase 3",
-      title: "Accessible Software",
+      phase: "Tahap 3",
+      title: "Perangkat Lunak yang Dapat Diakses",
       description: "Pada tahap ini, kami berfokus pada pengembangan perangkat lunak yang ramah pengguna dan inklusif bagi semua kalangan, termasuk penyandang disabilitas. Kami percaya, teknologi terbaik adalah yang memahami keterbatasan manusia dan mengubahnya menjadi kekuatan.",
       icon: Layers,
       status: "future",
       features: ["Software Ramah Pengguna", "Aksesibilitas", "Inklusivitas", "Teknologi untuk Disabilitas"]
     },
     {
-      phase: "Phase 4",
-      title: "IoT for Humanity",
+      phase: "Tahap 4",
+      title: "IoT untuk Kemanusiaan",
       description: "Langkah berikutnya adalah menjelajahi potensi Internet of Things (IoT) untuk menciptakan sistem cerdas yang bermanfaat bagi sektor sosial dan kesehatan. Bagi kami, teknologi cerdas bukan soal otomatisasi, tapi tentang menghadirkan hidup yang lebih aman, sehat, dan bermartabat.",
       icon: Cpu,
       status: "research",
@@ -87,17 +87,17 @@ export const ProductRoadmap = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-[#dfaa1a]/10 border border-[#dfaa1a]/30 rounded-full px-4 py-2 mb-6">
             <Globe className="h-4 w-4 text-[#dfaa1a]" />
-            <span className="text-[#dfaa1a] text-sm font-medium">Our Technology Journey</span>
+            <span className="text-[#dfaa1a] text-sm font-medium">Perjalanan Teknologi Kami</span>
           </div>
           
           <h2 className="text-4xl lg:text-6xl font-bold mb-6">
-            <span className="text-white">Technology</span>
+            <span className="text-white">Perjalanan</span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#dfaa1a] via-yellow-400 to-[#dfaa1a]">
-            Evolution Path
+            Teknologi Kami
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-4">
-            Perjalanan kami adalah cerita tentang kemajuan dan kemanusiaan.
+            <span className="italic">Perjalanan kami adalah cerita tentang kemajuan dan kemanusiaan.</span>
           </p>
           <p className="text-lg text-gray-400 max-w-4xl mx-auto leading-relaxed">
             Setiap langkah dalam pengembangan teknologi di AureLab lahir dari keinginan untuk menghadirkan dampak sosial yang nyata. Selain berevolusi secara teknis, kami juga menjadikan teknologi lebih dekat kepada mereka yang sering terpinggirkan.
@@ -149,7 +149,7 @@ export const ProductRoadmap = () => {
                         
                         {phase.status === 'current' && (
                           <div className="mt-6 flex items-center gap-2 text-[#dfaa1a] font-semibold">
-                            <span>Currently Active</span>
+                            <span>Sedang Aktif</span>
                             <div className="w-2 h-2 bg-[#dfaa1a] rounded-full animate-pulse"></div>
                           </div>
                         )}
@@ -184,11 +184,10 @@ export const ProductRoadmap = () => {
             
             <div className="relative z-10">
               <h3 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                Ready to Join the Innovation?
+                Bergabunglah Bersama Kami untuk Menyalakan yang Tak Terlihat
               </h3>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Bergabunglah dalam perjalanan transformasi digital dan wujudkan 
-                ide teknologi Anda bersama tim expert AureLab.
+                Mari berkolaborasi bersama kami dalam menciptakan teknologi yang inklusif, berdampak, dan lebih bermakna.
               </p>
               <button 
                 onClick={() => {
@@ -202,7 +201,7 @@ export const ProductRoadmap = () => {
                 }}
                 className="relative group bg-gradient-to-r from-[#dfaa1a] to-yellow-500 hover:from-yellow-500 hover:to-[#dfaa1a] text-black font-bold px-8 py-4 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 cursor-pointer"
               >
-                Start Your Project
+                BERGABUNG BERSAMA KAMI
                 <ArrowRight className="inline-block ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
                 <div className="absolute inset-0 bg-gradient-to-r from-[#dfaa1a] to-yellow-500 rounded-xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
               </button>

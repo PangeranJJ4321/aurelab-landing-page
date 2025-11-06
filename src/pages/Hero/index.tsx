@@ -63,7 +63,7 @@ export const HeroSection = () => {
               <div className="inline-flex items-center space-x-2 bg-[#dfaa1a]/10 border border-[#dfaa1a]/30 rounded-full px-4 py-2">
                 <Zap className="h-4 w-4 text-[#dfaa1a]" />
                 <span className="text-[#dfaa1a] text-sm font-medium">
-                  Ignite the Unseen
+                  Menyalakan yang Tak Terlihat
                 </span>
               </div>
 
@@ -105,7 +105,7 @@ export const HeroSection = () => {
                 className="border-[#dfaa1a] cursor-pointer text-[#dfaa1a] hover:bg-[#dfaa1a] hover:text-black px-8 py-4 text-lg rounded-lg transition-all duration-300 backdrop-blur-sm bg-transparent"
                 onClick={openProductsModal}
               >
-                Explore Products
+                Jelajahi Produk
               </Button>
             </div>
 
@@ -116,7 +116,7 @@ export const HeroSection = () => {
                   <Smartphone className="h-6 w-6 text-[#dfaa1a]" />
                 </div>
                 <span className="group-hover:text-white transition-colors duration-300">
-                  Mobile Development
+                  Pengembangan Mobile
                 </span>
               </div>
               <div className="flex items-center gap-3 text-gray-400 group cursor-pointer">
@@ -124,7 +124,7 @@ export const HeroSection = () => {
                   <Globe className="h-6 w-6 text-[#dfaa1a]" />
                 </div>
                 <span className="group-hover:text-white transition-colors duration-300">
-                  Web Solutions
+                  Solusi Web
                 </span>
               </div>
               <div className="flex items-center gap-3 text-gray-400 group cursor-pointer">
@@ -132,7 +132,7 @@ export const HeroSection = () => {
                   <Cpu className="h-6 w-6 text-[#dfaa1a]" />
                 </div>
                 <span className="group-hover:text-white transition-colors duration-300">
-                  IoT Innovation
+                  Inovasi IoT
                 </span>
               </div>
             </div>
@@ -265,7 +265,7 @@ export const HeroSection = () => {
                 Setiap proyek di AureLab berawal dari empati, dari memahami tantangan nyata yang dihadapi manusia di lapangan. Kami merancang sistem yang mempertimbangkan realitas pengguna di lapangan, mulai dari pelajar di sekolah kecil, tenaga kesehatan di daerah terpencil, hingga rekan penyandang disabilitas yang ingin berkarya tanpa batas.
               </p>
               <p className="text-lg text-black leading-relaxed">
-                Melalui pendekatan human-centered design, kami tidak hanya menciptakan produk digital. Kami membangun jembatan antara kemampuan dan kesempatan antara teknologi dan kemanusiaan yang saling menguatkan.
+                Melalui pendekatan human-centered design, kami tidak hanya menciptakan produk digital. Namun, kami membangun jembatan antara kemampuan dan kesempatan antara teknologi dan kemanusiaan yang saling menguatkan.
               </p>
             </div>
           </div>

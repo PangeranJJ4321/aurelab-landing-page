@@ -14,28 +14,28 @@ export const AboutSection = () => {
   const foundationPillars = [
     {
       icon: Users,
-      title: "Empathy",
+      title: "Empati",
       subtitle: "Empati",
       description: "Kami memulai setiap ide dengan empati mendengarkan cerita, memahami tantangan, lalu merancang solusi yang berarti.",
       color: "from-blue-500 to-blue-600"
     },
     {
       icon: Lightbulb,
-      title: "Inclusivity",
-      subtitle: "Inklusivitas",
+      title: "Inklusi",
+      subtitle: "Inklusi",
       description: "Kami percaya teknologi seharusnya dapat diakses oleh siapapun, tanpa batasan kemampuan, latar belakang, atau konteks sosial.",
       color: "from-green-500 to-green-600"
     },
     {
       icon: Shield,
-      title: "Innovation",
+      title: "Inovasi",
       subtitle: "Inovasi",
       description: "Kami terus bereksplorasi dan bereksperimen untuk menemukan cara baru agar teknologi tetap relevan, berkelanjutan, dan bermakna bagi kehidupan manusia.",
       color: "from-purple-500 to-purple-600"
     },
     {
       icon: CheckCircle,
-      title: "Integrity",
+      title: "Integritas",
       subtitle: "Integritas",
       description: "Kinerja kami berlandaskan pada nilai kejujuran, tanggung jawab, dan transparansi. Kami yakin bahwa nilai-nilai ini adalah fondasi dari setiap kemajuan.",
       color: "from-orange-500 to-orange-600"
@@ -81,20 +81,18 @@ export const AboutSection = () => {
           <div className="text-center lg:text-left order-1 lg:order-1">
             <div className="inline-flex items-center space-x-2 bg-[#dfaa1a]/10 border border-[#dfaa1a]/30 rounded-full px-4 py-2 mb-6">
               <Heart className="h-4 w-4 text-[#dfaa1a]" />
-              <span className="text-[#dfaa1a] text-sm font-medium">About AureLab</span>
+              <span className="text-[#dfaa1a] text-sm font-medium">Tentang AureLab</span>
             </div>
 
             <h2 className="text-4xl lg:text-6xl font-bold mb-6">
-              <span className="text-white">Membangun Masa Depan </span>
+              <span className="text-white">Tentang </span>
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#dfaa1a] via-yellow-400 to-[#dfaa1a]">
-                Digital Bersama
+                AureLab
               </span>
             </h2>
 
             <p className="text-xl text-gray-300 leading-relaxed max-w-lg mx-auto lg:mx-0">
-              AureLab ada karena kami percaya bahwa teknologi seharusnya untuk semua.
-
-              We exist to make technology accessible, meaningful, and inclusive — for every individual, regardless of their background or limitation..
+              AureLab ada karena kami percaya bahwa teknologi seharusnya untuk semua. Kami hadir untuk membuat teknologi yang dapat diakses, bermakna, dan inklusif — bagi setiap individu, tanpa memandang latar belakang atau keterbatasannya.
             </p>
           </div>
 
@@ -112,7 +110,7 @@ export const AboutSection = () => {
                   </p>
 
                   <p className="font-medium italic text-[#dfaa1a] text-base lg:text-lg">
-                    We believe technology should not exclude, but empower.
+                    Kami percaya teknologi tidak seharusnya mengecualikan, tetapi memberdayakan.
                   </p>
 
                   <p className="text-base lg:text-lg">
@@ -120,19 +118,19 @@ export const AboutSection = () => {
                   </p>
 
                   <p className="text-base lg:text-lg">
-                    Kami tidak hanya membangun produk, <span className="font-medium italic text-[#dfaa1a]">we build understanding</span>. Setiap desain, setiap baris kode, dan setiap keputusan pengembangan kami merujuk pada pengalaman manusia yang sebenarnya. Kami percaya bahwa efisiensi tanpa empati hanyalah mesin. Sementara kemajuan teknologi sejati terletak pada kemampuannya untuk memahami kebutuhan penggunanya.
+                    Kami tidak hanya membangun produk, <span className="font-medium italic text-[#dfaa1a]">Kami membangun pemahaman.</span> Setiap desain, setiap baris kode, dan setiap keputusan pengembangan kami merujuk pada pengalaman manusia yang sebenarnya. Kami percaya bahwa efisiensi tanpa empati hanyalah mesin. Sementara kemajuan teknologi sejati terletak pada kemampuannya untuk memahami kebutuhan penggunanya.
                   </p>
 
                   <p className="font-medium italic text-[#dfaa1a] text-center text-base lg:text-lg">
-                    Inclusion is not an afterthought, it's our foundation.
+                    Inklusi bukanlah pemikiran tambahan, melainkan fondasi kami.
                   </p>
 
                   <p className="text-base lg:text-lg">
-                    Melalui pendekatan <span className="font-medium">human-centered design</span>, AureLab berupaya menciptakan solusi digital yang relevan bagi semua kalangan. Tidak hanya mereka yang punya privilese, tetapi juga teman-teman disabilitas agar dapat mengakses teknologi tanpa hambatan visual atau fungsional. Sekolah dan lembaga pendidikan agar transformasi digital menjadi inklusif dan mudah dijangkau. Tenaga kesehatan dan organisasi sosial agar pelayanan publik dapat berjalan lebih efisien dan manusiawi.
+                    Melalui pendekatan <span className="font-medium">desain yang berpusat pada manusia</span>, AureLab berupaya menciptakan solusi digital yang relevan bagi semua kalangan. Tidak hanya mereka yang mempunyai <span className="font-medium">hak istimewa</span>, tetapi juga teman-teman penyandang disabilitas agar dapat mengakses teknologi tanpa hambatan visual atau fungsional. Sekolah dan lembaga pendidikan agar transformasi digital menjadi inklusif dan mudah dijangkau. Tenaga kesehatan dan organisasi sosial agar pelayanan publik dapat berjalan lebih efisien dan manusiawi.
                   </p>
 
                   <p className="text-base lg:text-lg">
-                    Kami ingin menjadi penghubung antara kemampuan dan kesempatan, antara teknologi dan kemanusiaan. <span className="font-medium italic text-[#dfaa1a]">At AureLab, we don't just innovate</span>. We listen, learn, and light the way for those who are often unseen. Because when technology understands people, it stops being just a tool — and becomes a bridge toward equality and empowerment.
+                    Kami ingin menjadi penghubung antara kemampuan dan kesempatan, antara teknologi dan kemanusiaan. <span className="font-medium italic text-[#dfaa1a]">Di AureLab, kami tidak hanya berinovasi. Kami mendengar, belajar, dan menyalakan jalan bagi mereka yang sering kali tidak terlihat. Karena ketika teknologi memahami manusia, ia berhenti menjadi sekadar alat — namun menjadi jembatan menuju kesetaraan dan pemberdayaan.</span>
                   </p>
                 </div>
               </div>
@@ -155,7 +153,6 @@ export const AboutSection = () => {
                 </div>
                 <div>
                   <CardTitle className="text-2xl text-white">Visi</CardTitle>
-                  <p className="text-[#dfaa1a] text-sm">Our Vision</p>
                 </div>
               </div>
             </CardHeader>
@@ -175,7 +172,6 @@ export const AboutSection = () => {
                 </div>
                 <div>
                   <CardTitle className="text-2xl text-white">Misi</CardTitle>
-                  <p className="text-purple-400 text-sm">Our Mission</p>
                 </div>
               </div>
             </CardHeader>
@@ -193,10 +189,10 @@ export const AboutSection = () => {
         <div className="mb-10">
           <div className="text-center mb-12">
             <h3 className="text-3xl mb-6 lg:text-4xl font-bold text-white mb-4">
-            Our Core Values
+            Nilai - Nilai Utama Kami
             </h3>
             <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-              Empathy. Inclusivity. Innovation. Integrity.
+              Empati. Inklusi. Inovasi. Integritas.
               Empat nilai yang menjadi dasar cara AureLab berpikir, bekerja, dan membantu sesama melalui teknologi.
             </p>
           </div>
@@ -240,7 +236,7 @@ export const AboutSection = () => {
                 });
               }
             }} className="relative group bg-gradient-to-r from-[#dfaa1a] to-yellow-500 hover:from-yellow-500 hover:to-[#dfaa1a] text-black font-bold px-8 py-4 rounded-xl text-lg transition-all duration-300 transform hover:scale-105">
-              Learn More About Us
+              Pelajari Lebih Lanjut
               <ArrowRight className="inline-block ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
               <div className="absolute inset-0 bg-gradient-to-r from-[#dfaa1a] to-yellow-500 rounded-xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
             </button>

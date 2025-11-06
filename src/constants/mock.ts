@@ -51,28 +51,28 @@ export const mockData = {
   team: {
     structure: [
       {
-        division: "Founder",
-        role: "The Vision Keeper",
+        division: "Pendiri",
+        role: "Penjaga Visi",
         description: "Memimpin arah dan filosofi AureLab agar setiap inovasi tetap berpijak pada nilai kemanusiaan dan keberlanjutan.",
-        responsibilities: ["Social Innovation Strategy", "Community Empowerment", "Human-Centered Leadership"]
+        responsibilities: ["Strategi Inovasi Sosial", "Pemberdayaan Masyarakat", "Kepemimpinan Berorientasi Manusia"]
       },
       {
         division: "AureCore",
-        role: "The Heart of Creation",
+        role: "Jantung Kreasi",
         description: "Tim inti yang merancang dan mengembangkan produk dengan pendekatan empatik sehingga  setiap teknologi punya makna bagi penggunanya.",
-        responsibilities: ["Human-Centered Product Design", "Ethical Technology Development", "Accessibility Integration"]
+        responsibilities: ["Desain Produk Berorientasi Pengguna", "Pengembangan Teknologi Beretika", "Integrasi Aksesibilitas"]
       },
       {
         division: "AureNet",
-        role: "The Connectors",
+        role: "Penghubung Digital",
         description: "Membangun jembatan digital yang memperkuat koneksi lintas sektor melalui solusi berbasis cloud dan kolaborasi daring.",
-        responsibilities: ["Digital Inclusion Infrastructure", "API Integration", "Open Collaboration Systems"]
+        responsibilities: ["Infrastruktur Inklusi Digital", "Integrasi API", "Sistem Kolaborasi Terbuka"]
       },
       {
-        division: "Specialist Teams",
-        role: "The Changemakers",
+        division: "Tim Spesialis",
+        role: "Penggerak Perubahan",
         description: "Tim multidisiplin yang menyesuaikan pendekatan sesuai konteks sosial dan kebutuhan manusia di lapangan.",
-        responsibilities: ["Inclusive UI/UX", "Data for Social Good", "Sustainable Impact Evaluation"]
+        responsibilities: ["Inklusif UI/UX", "Data untuk Kebaikan Sosial", "Evaluasi Dampak Berkelanjutan"]
       }
     ]
   },

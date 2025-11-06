@@ -22,7 +22,7 @@ export const TeamSection = () => {
 
   const getIcon = (division: string) => {
     switch (division) {
-      case "Founder":
+      case "Pendiri":
         return Crown;
       case "AureCore":
         return Code;
@@ -109,14 +109,14 @@ export const TeamSection = () => {
           <div className="inline-flex items-center space-x-2 bg-[#dfaa1a]/10 border border-[#dfaa1a]/30 rounded-full px-4 py-2 mb-6">
             <Users className="h-4 w-4 text-[#dfaa1a]" />
             <span className="text-[#dfaa1a] text-sm font-medium">
-              Our Team Structure
+              Tim Kami
             </span>
           </div>
 
           <h2 className="text-4xl lg:text-6xl font-bold mb-6">
-            <span className="text-white">Elite Technology</span>
+            <span className="text-white">Empati dalam</span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#dfaa1a] via-yellow-400 to-[#dfaa1a]">
-              Task Force
+              Kolaborasi
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-5xl mx-auto text-center leading-relaxed">
@@ -175,7 +175,7 @@ export const TeamSection = () => {
                   <div className="space-y-4">
                     <h5 className="font-bold text-white text-sm uppercase tracking-wide flex items-center gap-2">
                       <Zap className="h-4 w-4 text-[#dfaa1a]" />
-                      Key Expertise
+                      Keahlian Utama
                     </h5>
                     <div className="grid grid-cols-1 gap-3">
                       {member.responsibilities.map(
@@ -206,19 +206,21 @@ export const TeamSection = () => {
 
             <div className="relative z-10">
               <h3 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                Join Us to Ignite The Unseen
+                Bergabunglah Bersama Kami untuk Menyalakan yang Tak Terlihat
               </h3>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Mari berkolaborasi bersama kami dalam menciptakan teknologi yang
-                inklusif, berdampak, dan lebih bermakna.
+                Mari berkolaborasi bersama kami dalam menciptakan teknologi yang inklusif, berdampak, dan lebih bermakna.
                 
+              </p>
+              <p className="text-lg text-gray-400 mb-8 max-w-3xl mx-auto">
+                Kami percaya perubahan besar selalu dimulai dari hal sederhana mulai dari saling mendengar, memahami, dan berkolaborasi untuk menciptakan solusi yang inklusif bagi semua.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={openPositionsModal}
                   className="relative group bg-gradient-to-r from-[#dfaa1a] to-yellow-500 hover:from-yellow-500 hover:to-[#dfaa1a] text-black font-bold px-8 py-4 rounded-xl text-lg transition-all duration-300 transform hover:scale-105"
                 >
-                  View Open Positions
+                  BERGABUNG BERSAMA KAMI
                   <ArrowRight className="inline-block ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
                   <div className="absolute inset-0 bg-gradient-to-r from-[#dfaa1a] to-yellow-500 rounded-xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
                 </button>
@@ -234,7 +236,7 @@ export const TeamSection = () => {
                   }}
                   className="border border-[#dfaa1a]/50 text-[#dfaa1a] hover:bg-[#dfaa1a] hover:text-black px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 backdrop-blur-sm cursor-pointer"
                 >
-                  Learn About Culture
+                  Pelajari Misi Kami
                 </button>
               </div>
             </div>

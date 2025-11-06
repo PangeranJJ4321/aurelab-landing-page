@@ -69,7 +69,7 @@ export const ContactSection = () => {
       if (result.success) {
         setSubmitStatus({
           type: 'success',
-          message: 'Thank you for your message! We will get back to you soon.'
+          message: 'Terima kasih atas pesan Anda! Kami akan segera menghubungi Anda.'
         });
         setFormData({ name: '', email: '', company: '', message: '' });
       } else {
@@ -82,7 +82,7 @@ export const ContactSection = () => {
       console.error('Form submission error:', error);
       setSubmitStatus({
         type: 'error',
-        message: 'An unexpected error occurred. Please try again.'
+        message: 'Terjadi kesalahan yang tidak terduga. Silakan coba lagi.'
       });
     } finally {
       setIsLoading(false);
@@ -127,18 +127,17 @@ export const ContactSection = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-[#dfaa1a]/10 border border-[#dfaa1a]/30 rounded-full px-4 py-2 mb-6">
             <Mail className="h-4 w-4 text-[#dfaa1a]" />
-            <span className="text-[#dfaa1a] text-sm font-medium">Get In Touch</span>
+            <span className="text-[#dfaa1a] text-sm font-medium">Hubungi Kami</span>
           </div>
           
           <h2 className="text-4xl lg:text-6xl font-bold mb-6">
-            <span className="text-white">Let's Build the</span>
+            <span className="text-white">Mari Berkolaborasi</span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#dfaa1a] via-yellow-400 to-[#dfaa1a]">
-              Future Together
+              Bersama Kami
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Siap memulai revolusi digital? Tim expert AureLab siap membantu mewujudkan 
-            visi teknologi Anda dengan solusi inovatif yang sustainable.
+            Mari berkolaborasi bersama kami dalam menciptakan teknologi yang inklusif, berdampak, dan lebih bermakna.
           </p>
         </div>
 
@@ -151,9 +150,9 @@ export const ContactSection = () => {
                   <div className="p-2 bg-gradient-to-r from-[#dfaa1a] to-yellow-500 rounded-lg">
                     <Send className="h-6 w-6 text-black" />
                   </div>
-                  Start Your Project
+                  Mulai Proyek Anda
                 </CardTitle>
-                <p className="text-gray-400">Tell us about your vision and we'll make it reality</p>
+                <p className="text-gray-400">Ceritakan visi Anda dan kami akan mewujudkannya</p>
               </CardHeader>
               <CardContent className="p-8">
                 {/* Status Messages */}
@@ -177,7 +176,7 @@ export const ContactSection = () => {
                   <div className="mb-6 p-4 bg-red-500/10 border border-red-500/30 rounded-lg">
                     <div className="flex items-center gap-3 mb-2">
                       <AlertCircle className="h-5 w-5 text-red-400" />
-                      <span className="text-red-400 font-medium">Please fix the following errors:</span>
+                      <span className="text-red-400 font-medium">Mohon perbaiki kesalahan berikut:</span>
                     </div>
                     <ul className="list-disc list-inside space-y-1">
                       {errors.map((error, index) => (
@@ -189,53 +188,53 @@ export const ContactSection = () => {
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium text-gray-300">Full Name</label>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-300 mb-2">Nama Lengkap</label>
                       <input
                         type="text"
                         name="name"
                         value={formData.name}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:border-[#dfaa1a] focus:outline-none text-white placeholder-gray-400 transition-all duration-300"
-                        placeholder="Your name"
+                        placeholder="Nama Anda"
                         required
                       />
                     </div>
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium text-gray-300">Email Address</label>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-300 mb-2">Alamat Email</label>
                       <input
                         type="email"
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:border-[#dfaa1a] focus:outline-none text-white placeholder-gray-400 transition-all duration-300"
-                        placeholder="your@email.com"
+                        placeholder="email@anda.com"
                         required
                       />
                     </div>
                   </div>
                   
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-gray-300">Company/Organization</label>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Perusahaan/Organisasi</label>
                     <input
                       type="text"
                       name="company"
                       value={formData.company}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:border-[#dfaa1a] focus:outline-none text-white placeholder-gray-400 transition-all duration-300"
-                      placeholder="Company name (optional)"
+                      placeholder="Nama perusahaan (opsional)"
                     />
                   </div>
                   
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-gray-300">Project Details</label>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Detail Proyek</label>
                     <textarea
                       name="message"
                       value={formData.message}
                       onChange={handleInputChange}
                       rows={4}
                       className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:border-[#dfaa1a] focus:outline-none text-white placeholder-gray-400 resize-none transition-all duration-300"
-                      placeholder="Tell us about your project, requirements, and goals..."
+                      placeholder="Ceritakan tentang proyek, kebutuhan, dan tujuan Anda..."
                       required
                     />
                   </div>
@@ -250,11 +249,11 @@ export const ContactSection = () => {
                     {isLoading ? (
                       <>
                         <Loader2 className="inline-block mr-2 h-5 w-5 animate-spin" />
-                        Sending...
+                        Mengirim...
                       </>
                     ) : (
                       <>
-                        Send Message
+                        Kirim Pesan
                         <Send className="inline-block ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
                       </>
                     )}
@@ -290,7 +289,7 @@ export const ContactSection = () => {
                       <Phone className="h-6 w-6 text-white" />
                     </div>
                     <div>
-                      <h4 className="text-white font-semibold">Phone</h4>
+                      <h4 className="text-white font-semibold">Telepon</h4>
                       <p className="text-gray-400 text-sm">{contact.phone}</p>
                     </div>
                   </div>
@@ -304,7 +303,7 @@ export const ContactSection = () => {
                       <MapPin className="h-6 w-6 text-white" />
                     </div>
                     <div>
-                      <h4 className="text-white font-semibold">Location</h4>
+                      <h4 className="text-white font-semibold">Lokasi</h4>
                       <p className="text-gray-400 text-sm">{contact.address}</p>
                     </div>
                   </div>
@@ -317,17 +316,17 @@ export const ContactSection = () => {
               <CardHeader>
                 <CardTitle className="text-lg text-white flex items-center gap-3">
                   <Clock className="h-5 w-5 text-purple-400" />
-                  Operating Hours
+                  Jam Operasional
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-2">
                 <div className="flex justify-between text-sm">
-                  <span className="text-gray-400">Monday - Friday</span>
+                  <span className="text-gray-400">Senin - Jumat</span>
                   <span className="text-white">09:00 - 17:00</span>
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span className="text-gray-400">Saturday - Sunday</span>
-                  <span className="text-gray-500">Closed</span>
+                  <span className="text-gray-400">Sabtu - Minggu</span>
+                  <span className="text-gray-500">Tutup</span>
                 </div>
               </CardContent>
             </Card>
@@ -337,7 +336,7 @@ export const ContactSection = () => {
               <CardHeader>
                 <CardTitle className="text-lg text-white flex items-center gap-3">
                   <Zap className="h-5 w-5 text-[#dfaa1a]" />
-                  Connect With Us
+                  Terhubung dengan Kami
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -358,7 +357,7 @@ export const ContactSection = () => {
                   })}
                 </div>
                 <p className="text-gray-400 text-xs mt-3">
-                  Follow our journey and latest innovations
+                  Ikuti perjalanan dan inovasi terbaru kami
                 </p>
               </CardContent>
             </Card>
@@ -372,10 +371,10 @@ export const ContactSection = () => {
           <div className="relative z-10">
             <div className="text-center mb-12">
               <h3 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                Frequently Asked Questions
+                Pertanyaan yang Sering Diajukan
               </h3>
               <p className="text-gray-300 text-lg">
-                Quick answers to common questions about our services and process
+                Jawaban cepat untuk pertanyaan umum tentang layanan dan proses kami
               </p>
             </div>
             
